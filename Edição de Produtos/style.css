@@ -1,0 +1,156 @@
+/* Todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.imagem{
+ display:inline-block;
+ 
+}
+
+/* Elementos com o ID "titulo" */
+#titulo {
+    font-family: sans-serif;
+    color: orangered;
+    margin-left: 35%;
+    
+  
+
+} 
+
+#check{
+    display: inline-block;
+}
+
+/* Elementos de tag <fieldset>*/
+fieldset {
+    border: 0;
+}
+
+/* Elemento de tag <body> */
+body{
+    background-color:black;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+    margin-left: 26%;
+    margin-top: -15%;
+    
+}
+
+/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
+input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 15px;
+}
+
+/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
+.grupo:after {
+    clear: both;
+}
+
+/* Elementos de classe "campo" */
+.campo {
+    margin-bottom: 1em;
+}
+
+/* Elementos de classe "campo" de tag <label> */
+.campo label {
+    margin-bottom: 0.5em;
+    color: orangered;
+    display: block;
+}
+
+/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
+fieldset.grupo .campo {
+    float:  left;
+    margin-right: 2em;
+}
+
+/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
+.campo input[type="text"], .campo input[type="nome"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid white;
+    box-shadow: 2px 2px 2px black;
+    display: white;
+}
+
+/* Elemento de classe "botao" */
+.botao1 {
+    font-size: 1.2em;
+    background: orangered;
+    border: 0;
+    margin-bottom: 1em;
+    color: black;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 125%;
+    left: 38.5%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 343px;;height:25px;
+}
+.botao2 {
+    font-size: 1.2em;
+    background: silver;
+    border: 0;
+    margin-bottom: 1em;
+    color: black;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 131%;
+    left: 38.5%;
+    margin-right: -20%;
+    transform: translate(-50%, -50%);
+    width: 343px;;height:25px;
+}
+
+.botao3 {
+    font-size: 1.2em;
+    background:green;
+    border: 0;
+    margin-bottom: 1em;
+    color:black;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 131%;
+    left: 65%;
+    margin-right: -20%;
+    transform: translate(-50%, -50%)
+}
+.botao4 {
+    font-size: 1.2em;
+    background:red;
+    border: 0;
+    margin-bottom: 1em;
+    color:black;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 131%;
+    left: 80%;
+    margin-right: -20%;
+    transform: translate(-50%, -50%)
+}
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+
+
+/* Elementos de classe botão e de tag <select> */
+.botao, select{
+    cursor: pointer;
+}
