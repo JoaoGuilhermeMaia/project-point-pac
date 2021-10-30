@@ -1,0 +1,31 @@
+.tabela{
+    border: 1px solid #7F7F7F;
+    border-radius: 12px;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.antes{
+    text-decoration: line-through;
+}
+
+.depois{
+    color: red;
+}
+
+.botao1{
+    background-color: orange;
+    color: white;
+    box-shadow: orange;
+    
+}
+
+.botao2{
+    background-color: silver;
+    color: black;
+}
+
+.texto{
+    font-family: Arial, Helvetica, sans-serif;
+    color:orange;
+}
