@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point</title>
+    <link rel="stylesheet" href="/Principal/style.css">
+    <link rel="stylesheet" href="/CSS/responsivo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+ 
+
+
+</head>
+<body>
+    <section class="main">
+        <div class="center">
+            <header>
+                <div class="main_header">
+                    <div class="logo">
+                        <img src="/images/Logo_point.png" alt="" >
+                    </div>
+                    <div class="menu">
+                        <a href="/cadastro/cadastro.html" class="cadastrar"><p>Cadastrar</p></a>
+                        <a href="/login/login.html"><img src="/images/img_login.png" alt=""></a>
+                        <a href="#"><img src="/images/img_carrinho.png" alt=""></a>
+                    </div>
+                </div>
+                
+
+                 <!--Responsive Navbar-->
+                 <div class="wrapper">
+                    <input type="checkbox" id="btn" hidden>
+                    <label for="btn" class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                    </label>
+                    <nav id="sidebar">
+                      <div class="title">
+                          Barra de navegação
+                      </div>
+                      <ul class="list-items">
+                          <li><a href="cadastro.html"><i class="fas fa-clipboard-list"></i>Cadastrar</a></li>
+                          <li><a href="login.html"><i class="fas fa-user"></i>Login</a></li>
+                          <li><a href="#"><i class="fas fa-shopping-cart"></i>Carrinho</a></li>
+                          <div class="icons">
+                            <a href="https://www.linkedin.com/in/matheus-rosa-bruns-111536208/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/matheus_bruns/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/matheusbruns"><i class="fab fa-github"></i></a>
+                            <a href="https://www.youtube.com/channel/UC5HzeXbFYKQyu9tDMfzcPIQ"><i class="fab fa-youtube"></i></a>
+                          </div>
+                      </ul>
+                    </nav>
+                </div>
+
+            </header><!--Fim do cabeçalho-->
+
+            <div class="banner">
+                <img src="/images/Banner1.jpg" alt="">
+                <!--
+                <img src="/images/Banner2.jpg" alt="" height="400px">
+                <img src="/images/Banner3.jpg" alt="" height="400px">
+                <img src="/images/Banner4.jpg" alt="" height="400px">
+                -->
+            </div><!--Banner-->
+
+            <div class="botao_filtrar">
+                <button class="filtrar" >
+                    <img src="/images_BT/BT_cerveja.png" alt="" height="100px">
+                    <p>Cerveja</p>
+                </button>
+                <button class="filtrar" >
+                    <img src="/images_BT/BT_whiskey.png" alt="" height="100px">
+                    <p>Whiskey</p>
+                </button>
+                <button class="filtrar" >
+                    <img src="/images_BT/BT_vodka.png" alt="" height="100px">
+                    <p>Vodka</p>
+                </button>
+                <button class="filtrar" >
+                    <img src="/images_BT/BT_vinho.png" alt="" height="90px">
+                    <p>Vinho</p>
+                </button>
+                <button class="filtrar" >
+                    <img src="/images_BT/BT_refrigerante.png" alt="" height="95px">
+                    <p>Refrigerante</p>
+                </button>
+            </div><!--botão filtrar bebidas-->
+
+            <div class="produtos">
+                <div class="bg_produto" id="whiskey1">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/Jack.png" alt="" >
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Whiskey Jack Daniels</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 135,98</h2>
+                    </div>
+                    <div class="add_carrinho">
+                        <button>
+                            <h2>Adicionar</h2>
+                            <div class="imagem_cart">
+                                <img src="/images/img_carrinho.png" alt="" height="30px">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg_produto" id="refri1">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/coca.png" alt="">
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Refrigerante Coca Cola 2L</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 8,99</h2>
+                    </div>
+                    <div class="add_carrinho">
+                        <button>
+                            <h2>Adicionar</h2>
+                            <div class="imagem_cart">
+                                <img src="/images/img_carrinho.png" alt="" height="30px">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg_produto" id="whiskey2">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/Red_label.png" alt="">
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Whiskey Johnnie Walker Red Label</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 120,99</h2>
+                    </div>
+                    <div class="add_carrinho">
+                        <button>
+                            <h2>Adicionar</h2>
+                            <div class="imagem_cart">
+                                <img src="/images/img_carrinho.png" alt="" height="30px">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg_produto" id="vodka1">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/Vodka_smirnoff.png" alt="">
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Vodka Smirnoff</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 42,95</h2>
+                        <div class="add_carrinho">
+                            <button>
+                                <h2>Adicionar</h2>
+                                <div class="imagem_cart">
+                                    <img src="/images/img_carrinho.png" alt="" height="30px">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_produto" id="cerveja1">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/cerveja_budweiser.png" alt="" >
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Cerveja Budweiser 330ml</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 4,25</h2>
+                        <div class="add_carrinho">
+                            <button>
+                                <h2>Adicionar</h2>
+                                <div class="imagem_cart">
+                                    <img src="/images/img_carrinho.png" alt="" height="30px">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_produto" id="vinho1">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/vinho_campoLargo.png" alt="" >
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Vinho Tinto Suave Campo Largo</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 12,90</h2>
+                        <div class="add_carrinho">
+                            <button>
+                                <h2>Adicionar</h2>
+                                <div class="imagem_cart">
+                                    <img src="/images/img_carrinho.png" alt="" height="30px">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_produto" id="whiskey3">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/Jack_mel.png" alt="" >
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Whiskey Jack Daniels Tenessee Honey</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 129,99</h2>
+                        <div class="add_carrinho">
+                            <button>
+                                <h2>Adicionar</h2>
+                                <div class="imagem_cart">
+                                    <img src="/images/img_carrinho.png" alt="" height="30px">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_produto" id="cerveja2">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/Brahma_duploMalte.png" alt="" >
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Cerveja Brahma Duplo Malte</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 4,25</h2>
+                        <div class="add_carrinho">
+                            <button>
+                                <h2>Adicionar</h2>
+                                <div class="imagem_cart">
+                                    <img src="/images/img_carrinho.png" alt="" height="30px">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_produto" id="refri2">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/aguaTonica.png" alt="" >
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Água tônica 350ml</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 2,50</h2>
+                        <div class="add_carrinho">
+                            <button>
+                                <h2>Adicionar</h2>
+                                <div class="imagem_cart">
+                                    <img src="/images/img_carrinho.png" alt="" height="30px">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_produto" id="refri3">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/guarana.png" alt="" >
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Guaraná Antarctica 2L</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 5,99</h2>
+                        <div class="add_carrinho">
+                            <button>
+                                <h2>Adicionar</h2>
+                                <div class="imagem_cart">
+                                    <img src="/images/img_carrinho.png" alt="" height="30px">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_produto" id="vinho2">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/vinhoBertolo.png" alt="" >
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Vinho Garibaldi Vino Di Bartolo Tinto Suave</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 15,90</h2>
+                        <div class="add_carrinho">
+                            <button>
+                                <h2>Adicionar</h2>
+                                <div class="imagem_cart">
+                                    <img src="/images/img_carrinho.png" alt="" height="30px">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_produto" id="vodka2">
+                    <div class="imagem">
+                        <img src="/imagens_produtos/vodkaAbsolut.png" alt="" >
+                    </div>
+                    <div class="nome_produto">
+                        <h2>Vodka Absolut 1L</h2>
+                    </div>
+                    <div class="preco_produto">
+                        <h2>R$ 99,90</h2>
+                        <div class="add_carrinho">
+                            <button>
+                                <h2>Adicionar</h2>
+                                <div class="imagem_cart">
+                                    <img src="/images/img_carrinho.png" alt="" height="30px">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div><!--produtos-->
+
+            <footer></footer>
+        </div><!--center-->
+    </section><!--main-->
+
+
+</body>
+</html>
