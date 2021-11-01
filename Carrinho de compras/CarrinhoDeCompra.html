@@ -26,7 +26,7 @@
 
 <div id="position">
     <p class="CarrinhoTitulo">Carrinho</p>
-    <table width="80%" border="1">
+    <table>
         <tr class="line01">
             <td>Produtos</td>
             <td>Preço unitário</td>
@@ -37,13 +37,14 @@
             <td><img src="imagem/whiskey01.png" alt="Whisck">
              <p>Whiskey Jack Daniels 1L <br> Old No.7 Brand</p></td>
              <td> valor:</td>
-             <td><div data-app="product.quantity" id="quantidade">
+             <td>
+             <div data-app="product.quantity" id="quantidade">
                  <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>
                  <label>Quantidade:</label>      
                  <input type="button" id="plus" value='-' onclick="process(-1)" />
                  <input id="quant" name="quant" class="text" size="1" type="text" value="1" maxlength="5" />
                  <input type="button" id="minus" value='+' onclick="process(1)">
-               </div>
+              </div>
              </td>
         </tr>
         <tr class="line03">
