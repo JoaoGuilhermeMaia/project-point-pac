@@ -2,25 +2,8 @@
     box-shadow: blanchedalmond;
 }
 /* Todos os elementos da página */
-* {
-    margin: 1px;
-    padding: 10px;
-    box-sizing:border-box;
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
 
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    width: 100%;
-    height: 90px;
-}
+
 .logo{
     margin-left: 30px;
     margin-top: 20px;
@@ -32,7 +15,7 @@ header{
 /* Elementos com o ID "titulo" */
 #titulo {
     font-family: sans-serif;
-    color: orangered;
+    color: orange;
     margin-left: 35%;
     
   
@@ -50,12 +33,12 @@ fieldset {
 
 /* Elemento de tag <body> */
 body{
-    background-color:black;
+    background-color:white;
     font-family: sans-serif;
     font-size: 1em;
-    color: orangered;
-    margin-left: 26%;
-    margin-top: 0%;
+    color: orange;
+    margin-left: 16.2em;
+    margin-top: 0px;
     
 }
 
@@ -85,7 +68,7 @@ input, select, textarea, button {
 /* Elementos de classe "campo" de tag <label> */
 .campo label {
     margin-bottom: 0.5em;
-    color: orangered;
+    color: orange;
     display: block;
 }
 
@@ -106,7 +89,7 @@ fieldset.grupo .campo {
 /* Elemento de classe "botao" */
 .botao1 {
     font-size: 1.2em;
-    background: orangered;
+    background: orange;
     border: 0;
     margin-bottom: 1em;
     color: black;
@@ -139,7 +122,7 @@ fieldset.grupo .campo {
 
 .botao3 {
     font-size: 1.2em;
-    background:green;
+    background:greenyellow;
     border: 0;
     margin-bottom: 1em;
     color:black;
@@ -173,4 +156,14 @@ fieldset.grupo .campo {
 /* Elementos de classe botão e de tag <select> */
 .botao, select{
     cursor: pointer;
+}
+
+footer{
+    margin-top: 13px;
+    height: 37.5em;
+    width: 60em;
+    padding: 40px;
+    background-color:black;
+    border-radius: 50px;
+    
 }
