@@ -97,11 +97,11 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     position: absolute;
-    top: 85%;
-    left: 38.5%;
-    margin-right: -50%;
+    top: 31.5em;
+    left: 25em;
+    margin-right:10em;
     transform: translate(-50%, -50%);
-    width: 343px;;height:25px;
+    width: 18.5em;height:35px;
 }
 .botao2 {
     font-size: 1.2em;
@@ -113,11 +113,11 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     position: absolute;
-    top: 91%;
-    left: 38.5%;
-    margin-right: -20%;
+    top: 34.5em;
+    left: 25em;
+    margin-right: 10px;
     transform: translate(-50%, -50%);
-    width: 343px;;height:25px;
+    width: 18.5em;;height:35px;
 }
 
 .botao3 {
@@ -130,25 +130,25 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     position: absolute;
-    top: 91%;
-    left: 65%;
-    margin-right: -20%;
-    transform: translate(-50%, -50%)
+    top: 34.5em;
+    left: 45em;
+    margin-right: 1px;
+    transform: translate(-50%, -50%);
+    width: 10em;;height:35px;
+    display: inline-block;
 }
 .botao4 {
     font-size: 1.2em;
     background:red;
     border: 0;
-    margin-bottom: 1em;
     color:black;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 91%;
-    left: 80%;
-    margin-right: -20%;
-    transform: translate(-50%, -50%)
+    top: 35.5em;
+    left: 35em;
+    margin-right: 1px;
+    transform: translate(-50%, -50%);
+    width: 10em;height:35px;
+    display: inline-block;
 }
 /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
 
