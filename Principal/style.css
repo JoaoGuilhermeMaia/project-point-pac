@@ -12,15 +12,6 @@ html,body{
     
 }
 
-/*
-.center{
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2%;
-    
-}
-*/
-
 section .main{
     width: 100%;
 }
@@ -55,17 +46,6 @@ header{
 .menu img{
     height: 40px;
     
-}
-.menu a p{ /*Botão cadastrar*/
-    font-size: 30px;
-    color: rgb(255, 106, 0);
-    
-    
-}
-
-.menu a p:hover{
-    color: rgb(184, 77, 0);
-    transition: 0.2s;
 }
 
 .menu a{
