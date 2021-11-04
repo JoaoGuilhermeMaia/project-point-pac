@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdiçaoDeProduto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="fundo">
+    <header>
+        <div class="logo">
+            <img src="Logo_point.png" alt="" height="20px">
+        </div>
+    </header>     
+          
+    </div>
+    
+    <footer>
+        <h1 id="titulo">Ediçao de Produtos</h1>
+    <form>
+
+        <fieldset class="grupo">
+            <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+            <div class="campo">
+                <label for="nome"><strong>Nome do Produto:</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+        </fieldset> 
+
+             <!-- Caixa de texto -->
+        <div class="campo">
+            <br>
+            <label for="Descriçao"><strong>Descrição:</strong></label>
+            <textarea rows="8" style="width: 20em" id="experiencia" name="experiencia"></textarea>
+        </div>
+
+        <fieldset class="grupo">
+            <!-- Campo do nome com legenda "valor" e css de classe "campo" -->
+            <div class="campo">
+                <label for="valor"><strong>Valor do Produto:</strong></label>
+                <input type="text" name="valor" id="valor" required>
+            </div>
+        </fieldset> 
+
+        <!-- Botões do formulário -->
+        <div>
+        <button class="botao1" type="submit" onsubmit="">Editar</button>
+        </div>
+
+        <div>
+        <button class="botao2" type="submit" onsubmit="">Voltar</button>
+        </div>
+
+        <div>
+        <button class="botao3" type="submit" onsubmit="">Adicionar Imagem</button>
+        </div>
+
+        <div>
+        <button class="botao4" type="submit" onsubmit="">Remover Imagem</button>
+        </div>            
+    </footer>
+    </form>
+</div>
+</body>
+</html>
