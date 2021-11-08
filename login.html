@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Point - Login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
@@ -18,10 +18,13 @@
         <h2>Login</h2>
         <br>
         <p>E-mail</p>
-        <input type="text" placeholder="Digite seu email" data-val="True" name="email">
+        <input class="email" type="text" placeholder="Digite seu email" data-val="True" name="email">
         <br><br>
         <p>Senha</p>
-        <input type="password" placeholder="Digite sua senha">
+        <input class="password" type="password" placeholder="Digite sua senha" id="myInput">
+        <div class="mostrarSenha">
+            <input type="checkbox" onclick="myFunction()"> <p>Mostrar senha</p>
+        </div>
         <br><br>
         <div class="botao">
             <button class="entrar" type="submit">Entrar</button>
@@ -33,6 +36,17 @@
             <a href="/cadastro/cadastro.html"><p>Não tem conta? Cadastre-se</p></a>
         </div>
     </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
 
     
 </body>
