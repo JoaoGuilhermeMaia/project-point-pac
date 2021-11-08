@@ -2,7 +2,7 @@
     box-shadow: blanchedalmond;
 }
 /* Todos os elementos da página */
-
+ 
 
 .logo{
     margin-left: 30px;
@@ -98,9 +98,8 @@ fieldset.grupo .campo {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     position: absolute;
     top: 31.5em;
-    left: 25em;
+    left: 15.8em;
     margin-right:10em;
-    transform: translate(-50%, -50%);
     width: 18.5em;height:35px;
 }
 .botao2 {
@@ -114,9 +113,8 @@ fieldset.grupo .campo {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     position: absolute;
     top: 34.5em;
-    left: 25em;
+    left: 15.8em;
     margin-right: 10px;
-    transform: translate(-50%, -50%);
     width: 18.5em;;height:35px;
 }
 
@@ -124,18 +122,15 @@ fieldset.grupo .campo {
     font-size: 1.2em;
     background:greenyellow;
     border: 0;
-    margin-bottom: 1em;
     color:black;
     padding: 0.2em 0.6em;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     position: absolute;
     top: 34.5em;
-    left: 45em;
-    margin-right: 1px;
-    transform: translate(-50%, -50%);
+    left: 38em;
     width: 10em;;height:35px;
-    display: inline-block;
+   
 }
 .botao4 {
     font-size: 1.2em;
@@ -143,12 +138,11 @@ fieldset.grupo .campo {
     border: 0;
     color:black;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    top: 35.5em;
-    left: 35em;
-    margin-right: 1px;
-    transform: translate(-50%, -50%);
+    top: 34.5em;
+    left: 53em;
     width: 10em;height:35px;
-    display: inline-block;
+    position: absolute;
+   
 }
 /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
 
@@ -167,3 +161,7 @@ footer{
     border-radius: 50px;
     
 }
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+  } 
