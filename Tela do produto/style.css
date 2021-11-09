@@ -12,43 +12,41 @@ h2{
 .depois{
     color: red;
 }
+ .button1 {
+ font-size: 26px;
+ background-color: orange;
+ color: white;
+ border: 2px solid orange;
+ border-radius: 15px;
+ border-radius: 0px;
+ height: 40px;
+ width: 215px;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Gaegu');
-        .button1 {
-            font-size: 26px;
-            background-color: orange;
-            color: white;
-            border: 2px solid orange;
-            border-radius: 15px;
-            border-radius: 0px;
-            height: 40px;
-            width: 300px;
-        }
+.button1:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
 
-        .button1:hover {
-            background-color:orange;
-            border: 2px solid #000;
-            color: white;
-            transition: all 0.5s ease-in;
-            transition-delay: 0.05s;
-        }
-
-        .button1:hover:after {
-            content: "f217";
-            font-style: normal;
-            font-variant-caps: normal;
-            font-variant-ligatures: normal;
-            text-rendering: auto;
-        }
 
 .button2{
+    font-size: 26px;
     background-color: silver;
-    border-color: silver;
-    color: black;
+    color: white;
+    border: 2px solid silver    ;
+    border-radius: 15px;
+    border-radius: 0px;
+    height: 40px;
+    width: 215px;
+}
 
+.button2:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .texto{
     font-family: Arial, Helvetica, sans-serif;
     color:orange;
 }
+
