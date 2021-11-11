@@ -45,6 +45,19 @@
             </div>
         </fieldset> 
 
+        
+            <form action="processa_imagem_perfil.php" method="post" enctype="multipart/form-data">
+                <div class="anexo">
+                   <label>Anexar Imagem:<input type="file" name="image[]" multiple="multiple"></label>
+                </div>
+
+                <div>
+                  <input class="enviar" type="submit" value="Submit" name="submit">
+                </div>
+            </form>
+        
+
+
         <!-- Botões do formulário -->
         <div>
         <button class="botao1" type="submit" onsubmit="">Cadastrar</button>
@@ -55,8 +68,7 @@
         </div>
 
         <div>
-        <button class="botao3" type="submit" onsubmit="">Adicionar Imagem</button>
-        <button class="botao4" type="submit" onsubmit="">Remover Imagem</button>
+          <button class="botao4" type="submit" onsubmit="">Remover Imagem</button>
         </div>            
     </footer>
     </form>
