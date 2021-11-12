@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div id="fundo">
-    <header>
-        <div class="logo">
-            <img src="Logo_point.png" alt="" height="20px">
-        </div>
-    </header>     
-          
-    </div>
+<body>  
+
     
     <footer>
+        <header>
+            <div class="logo">
+                <img src="imagem/Logo_point.png" alt="" height="70px">
+            </div>
+        </header>
         <h1 id="titulo">Cadastro de Produtos</h1>
     <form>
 
-        <fieldset class="grupo">
+        <fieldset class="group">
             <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
             <div class="campo">
                 <label for="nome"><strong>Nome do Produto:</strong></label>
@@ -48,11 +46,11 @@
         
             <form action="processa_imagem_perfil.php" method="post" enctype="multipart/form-data">
                 <div class="anexo">
-                   <label>Anexar Imagem:<input type="file" name="image[]" multiple="multiple"></label>
+                   <input type="file" name="image[]" multiple="multiple">
                 </div>
 
                 <div>
-                  <input class="enviar" type="submit" value="Submit" name="submit">
+                  <button input class="enviar" type="submit" value="Submit" name="submit"> Adicionar imagem</button>
                 </div>
             </form>
         
@@ -68,7 +66,7 @@
         </div>
 
         <div>
-          <button class="botao4" type="submit" onsubmit="">Remover Imagem</button>
+          <button class="botao3" type="submit" onsubmit="">Remover Imagem</button>
         </div>            
     </footer>
     </form>
