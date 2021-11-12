@@ -5,8 +5,9 @@
  
 
 .logo{
-    margin-left: 30px;
-    margin-top: 20px;
+    display: flex;
+    
+
     
 }
 
@@ -16,7 +17,8 @@
 #titulo {
     font-family: sans-serif;
     color: orange;
-    margin-left: 35%;
+    margin-left: 12em;
+    
     
   
 
@@ -51,7 +53,7 @@ input, select, textarea, button {
 }
 
 /* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
-.grupo:before, .grupo:after {
+.group:before, .group:after {
     display: table;
 }
 
@@ -88,8 +90,8 @@ fieldset.grupo .campo {
 
 .anexo{
     color:white;
-    left: 35em;
-    top: 35em;
+    left: 50em;
+    top: 23em;
     position: absolute;
 }
 
@@ -142,7 +144,7 @@ fieldset.grupo .campo {
 
    
 
-.botao4 {
+.botao3 {
     font-size: 1.2em;
     background:red;
     border: 0;
