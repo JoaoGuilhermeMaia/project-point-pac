@@ -10,7 +10,7 @@
     margin-top: 75px;
     margin-left: 25px;
     margin-right: 25px;
-    height: 40em;
+    height: 35em;
 }
 
 img, p, h2, .img2, .quantidade{
@@ -53,7 +53,7 @@ h2{
     height: 40px;
     width: 175px;
     position:absolute; 
-    top:20em;
+    top:18em;
     left:37em;
 }
 
@@ -66,14 +66,14 @@ h2{
 .button2{
     font-size: 26px;
     background-color: silver;
-    color: white;
+    color: black;
     border: 2px solid silver    ;
     border-radius: 15px;
     border-radius: 0px;
     height: 40px;
     width: 175px;
     position:absolute; 
-    top:20em;
+    top:18em;
     left:47em;
     display: inline-block;
 }
@@ -85,10 +85,10 @@ h2{
 
 .text{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 16px;
     color:orange;
     position:absolute; 
-    top:25em;
-    left: 25em;
+    top:35em;
+    left: 37em;
 }
 
