@@ -6,24 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TelaDoProduto</title>
     <link rel="stylesheet" href="style.css">
+    <script src="Quantidade.js"></script>
 </head>
 <body>
  <div class="tabela">
-      
-        <h2>Whiskey Johnnie Walker Red Label</h2>
+              
+           <img src="imagem/red.png" alt="" width="450px">
 
-        
-           <img src="imagem/red.png" alt="">
+           <h2>Whiskey Johnnie Walker Red Label</h2>
         <div class="img2">  
-           <img id="estrela" src="imagem/estrela.png" alt="">
-           <img id="estrela" src="imagem/estrela.png" alt="">
-           <img id="estrela" src="imagem/estrela.png" alt="">
-           <img id="estrela" src="imagem/estrela.png" alt="">
+           <img src="imagem/estrela.png" alt="">
+           <img src="imagem/estrela.png" alt="">
+           <img src="imagem/estrela.png" alt="">
+           <img src="imagem/estrela.png" alt="">
            <img src="imagem/estrela1.png" alt="">
         </div>
         <p class="antes">R$115,78</p>
 
         <p class="depois">R$104,90</p>
+
+
+        <div data-app="product.quantity" id="quantidade">
+         <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>
+         <label>Quantidade:</label>      
+         <input type="button" id="plus" value='-' onclick="process(-1)" />
+         <input id="quant" name="quant" class="text" size="1" type="text" value="1" maxlength="5" />
+         <input type="button" id="minus" value='+' onclick="process(1)">
+       </div>
+
+       
 
        
     
