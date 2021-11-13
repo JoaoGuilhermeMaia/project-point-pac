@@ -13,7 +13,7 @@
     height: 40em;
 }
 
-img, p, h2, .img2{
+img, p, h2, .img2, .quantidade{
     display: inline-block;
 }
 h2{
@@ -29,6 +29,8 @@ h2{
     
    
 }
+
+
 .antes{
     text-decoration: line-through;
     position: absolute;
