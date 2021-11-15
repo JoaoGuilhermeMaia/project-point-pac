@@ -5,8 +5,9 @@
  
 
 .logo{
-    margin-left: 30px;
-    margin-top: 20px;
+    display: flex;
+    
+
     
 }
 
@@ -16,7 +17,8 @@
 #titulo {
     font-family: sans-serif;
     color: orange;
-    margin-left: 35%;
+    margin-left: 12em;
+    
     
   
 
@@ -51,7 +53,7 @@ input, select, textarea, button {
 }
 
 /* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
-.grupo:before, .grupo:after {
+.group:before, .group:after {
     display: table;
 }
 
@@ -86,6 +88,27 @@ fieldset.grupo .campo {
     display: white;
 }
 
+.anexo{
+    color:white;
+    left: 50em;
+    top: 23em;
+    position: absolute;
+}
+
+.enviar{
+    font-size: 1.2em;
+    background:greenyellow;
+    border: 0;
+    color:black;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 34.5em;
+    left: 38em;
+    width: 10em;;height:35px;
+}
+
 /* Elemento de classe "botao" */
 .botao1 {
     font-size: 1.2em;
@@ -118,21 +141,10 @@ fieldset.grupo .campo {
     width: 18.5em;;height:35px;
 }
 
-.botao3 {
-    font-size: 1.2em;
-    background:greenyellow;
-    border: 0;
-    color:black;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 34.5em;
-    left: 38em;
-    width: 10em;;height:35px;
+
    
-}
-.botao4 {
+
+.botao3 {
     font-size: 1.2em;
     background:red;
     border: 0;
@@ -144,7 +156,7 @@ fieldset.grupo .campo {
     position: absolute;
    
 }
-/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+
 
 
 /* Elementos de classe botão e de tag <select> */
