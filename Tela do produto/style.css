@@ -38,9 +38,9 @@ header{
     border: 1px solid black;
     border-radius: 12px;
     margin-top: 75px;
-    margin-left: 25px;
-    margin-right: 25px;
-    height: 35em;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 30em;
 }
 
 img, p, h2, .img2, .quantidade{
