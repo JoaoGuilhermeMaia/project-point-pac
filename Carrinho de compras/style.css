@@ -41,7 +41,7 @@ body{
 
 
 #table{
-    border:solid #808080;
+    border:solid black;
     border-radius: 20px;
 }
 
@@ -121,13 +121,13 @@ p, th{
 
 
 .Finalizar{
-    background-color: orangered;
+    background-color: orange;
     color:black;
     margin-left: 600px;
     margin-bottom: 20px;
     padding: 10px;     
     margin: 10px;
-    border-color: orangered; 
+    border-color: orange; 
     margin-left: 75em;
     
 }
