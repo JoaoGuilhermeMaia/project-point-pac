@@ -2,28 +2,12 @@
     box-shadow: blanchedalmond;
 }
 /* Todos os elementos da página */
-* {
-    margin: 1px;
-    padding: 10px;
-    box-sizing:border-box;
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
+ 
 
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    width: 100%;
-    height: 90px;
-}
 .logo{
-    margin-left: 30px;
-    margin-top: 20px;
+    display: flex;
+    
+
     
 }
 
@@ -32,8 +16,9 @@ header{
 /* Elementos com o ID "titulo" */
 #titulo {
     font-family: sans-serif;
-    color: orangered;
-    margin-left: 35%;
+    color: orange;
+    margin-left: 12em;
+    
     
   
 
@@ -50,12 +35,12 @@ fieldset {
 
 /* Elemento de tag <body> */
 body{
-    background-color:black;
+    background-color:white;
     font-family: sans-serif;
     font-size: 1em;
-    color: orangered;
-    margin-left: 26%;
-    margin-top: 0%;
+    color: orange;
+    margin-left: 16.2em;
+    margin-top: 0px;
     
 }
 
@@ -68,7 +53,7 @@ input, select, textarea, button {
 }
 
 /* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
-.grupo:before, .grupo:after {
+.group:before, .group:after {
     display: table;
 }
 
@@ -85,7 +70,7 @@ input, select, textarea, button {
 /* Elementos de classe "campo" de tag <label> */
 .campo label {
     margin-bottom: 0.5em;
-    color: orangered;
+    color: orange;
     display: block;
 }
 
@@ -103,10 +88,31 @@ fieldset.grupo .campo {
     display: white;
 }
 
+.anexo{
+    color:white;
+    left: 50em;
+    top: 23em;
+    position: absolute;
+}
+
+.enviar{
+    font-size: 1.2em;
+    background:greenyellow;
+    border: 0;
+    color:black;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 34.5em;
+    left: 38em;
+    width: 10em;;height:35px;
+}
+
 /* Elemento de classe "botao" */
 .botao1 {
     font-size: 1.2em;
-    background: orangered;
+    background: orange;
     border: 0;
     margin-bottom: 1em;
     color: black;
@@ -114,11 +120,10 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     position: absolute;
-    top: 85%;
-    left: 38.5%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 343px;;height:25px;
+    top: 31.5em;
+    left: 15.8em;
+    margin-right:10em;
+    width: 18.5em;height:35px;
 }
 .botao2 {
     font-size: 1.2em;
@@ -130,47 +135,45 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     position: absolute;
-    top: 91%;
-    left: 38.5%;
-    margin-right: -20%;
-    transform: translate(-50%, -50%);
-    width: 343px;;height:25px;
+    top: 34.5em;
+    left: 15.8em;
+    margin-right: 10px;
+    width: 18.5em;;height:35px;
 }
+
+
+   
 
 .botao3 {
     font-size: 1.2em;
-    background:green;
-    border: 0;
-    margin-bottom: 1em;
-    color:black;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 91%;
-    left: 65%;
-    margin-right: -20%;
-    transform: translate(-50%, -50%)
-}
-.botao4 {
-    font-size: 1.2em;
     background:red;
     border: 0;
-    margin-bottom: 1em;
     color:black;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    top: 34.5em;
+    left: 53em;
+    width: 10em;height:35px;
     position: absolute;
-    top: 91%;
-    left: 80%;
-    margin-right: -20%;
-    transform: translate(-50%, -50%)
+   
 }
-/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+
 
 
 /* Elementos de classe botão e de tag <select> */
 .botao, select{
     cursor: pointer;
 }
+
+footer{
+    margin-top: 13px;
+    height: 37.5em;
+    width: 60em;
+    padding: 40px;
+    background-color:black;
+    border-radius: 50px;
+    
+}
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+  } 
