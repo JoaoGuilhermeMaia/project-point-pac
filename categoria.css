@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(175, 192, 238);
+}
+
+header{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    margin-bottom: 30px;
+}
+header img{
+    margin-left: 30px;
+    height:60px;
+}
+.logo{
+    padding: 10px;
+}
+
+.main_category{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.registration_category{
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 0;
+    border-radius: 10px 10px 0 0 ;
+    background-color: rgba(231, 231, 231, 0.685);
+}
+.registration_category h2{
+    color: rgb(255, 145, 0);
+    text-align: center;
+    padding: 7px;    
+}
+
+.center_category{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    
+}
+.center_category .name_category p{
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+.center_category .name_category{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.center_category .name_category input{
+    width: 350px;
+    margin-top: 20px;
+    padding: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+}
+
+.input_img{
+    height: 270px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(216, 216, 216);
+    margin: 0 10px;
+}
+.file_selection{
+    margin-top: 50px;
+}
+.input_img input[type='file']{
+    display: none;
+}
+.input_img label {
+  background-color: #ff9900;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  padding: 6px 20px;
+}
+.input_img i{
+    font-size: 100px;
+    display: block;
+    margin-top: 50px;
+    color: rgb(190, 190, 190);
+}
+
+.registrationButton{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.registrationButton button{
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #ff9900;
+    border: none;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:450px){
+    .center_category .name_category input{
+        width: 250px;
+    }
+    .center_category .name_category p{
+        font-size: 20px;
+        margin-bottom: -10px;
+    }
+    header img{
+        height:50px;
+    }
+    header img{
+        margin-left: 10px;
+    }
+    
+}
+@media screen and (max-width:370px){
+    .registration_category h2{
+        font-size: 25px;   
+    }
+    .registrationButton button{
+        width: 250px;
+        margin-top: 20px;
+    }
+    header img{
+        margin-left: 10px;
+    }
+    header img{
+        height:40px;
+    }
+}
