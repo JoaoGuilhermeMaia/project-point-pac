@@ -70,6 +70,7 @@
     color: #f2f2f2;
     border-bottom: 1px solid #222;
     padding: 10px 0;
+    
 }
 #sidebar .list-items{
     position: relative;
@@ -156,6 +157,27 @@
     }
     .bg_produto{
         width: 150px;
+        height:450px;
+    }
+    .bg_produto .nome_produto h2{
+        font-size:17px;
+    }
+    .bg_produto .imagem img{
+        height: 200px;
+        width: 100%;
+    }
+    .add_carrinho h2{
+        font-size: 19px;
+        top: 10px;
+    }
+    .add_carrinho .imagem_cart img{
+        height: 25px;
+    }
+}
+@media screen and (max-width: 570px){
+    .bg_produto{
+        width: 150px;
+        height:450px;
     }
     .bg_produto .nome_produto h2{
         font-size:17px;
@@ -163,43 +185,19 @@
     .bg_produto .imagem img{
         height: 200px;
     }
-    .add_carrinho{
-        width: 150px; 
-    }
     .add_carrinho h2{
-        font-size: 22px;
-        position: relative;
+        font-size: 19px;
         top: 10px;
     }
-}
-@media screen and (max-width: 570px){
-    .bg_produto{
-        width: 140px;
-        margin: 15px 6px;
-    }
-    .bg_produto .nome_produto h2{
-        font-size:16px;
-    }
-    .bg_produto .imagem{
-        border-radius: 20px;
-    }
-    .bg_produto .imagem img{
-        height: 200px;
-    }
-    .add_carrinho{
-        width: 140px; 
-    }
-    .add_carrinho h2{
-        font-size: 20px;
-        position: relative;
-        top: 10px;
+    .add_carrinho .imagem_cart img{
+        height: 25px;
     }
 }
 @media screen and (max-width: 480px){
-    .wrapper{              
+    .wrapper{              /*Button responsive navbar*/
         display: flex; 
     }
-    .menu p, a img{
+    .menu p, a img{         /*Some */
         display: none;
     }
 }
@@ -216,26 +214,24 @@
     .botao_filtrar p{
         font-size: 12px;
     }
+    
     .bg_produto{
         width: 150px;
+        height:440px;
+        margin: 10px 10px;
     }
     .bg_produto .nome_produto h2{
-        font-size: 17px;
-    }
-    .bg_produto .imagem{
-        border-radius: 20px;
+        font-size:17px;
     }
     .bg_produto .imagem img{
         height: 200px;
     }
-    .add_carrinho{
-        width: 150px; 
-    }
-    .add_carrinho{
-        width: 150px; 
-    }
     .add_carrinho h2{
-        font-size: 20px;
+        font-size: 15px;
+        top: 12px;
+    }
+    .add_carrinho .imagem_cart img{
+        height: 23px;
     }
 }
 @media screen and (max-width: 350px){
@@ -245,30 +241,22 @@
     }
     .bg_produto{
         width: 120px;
-        margin: 10px 5px;
-    }
-    .bg_produto .imagem{
-        border-radius: 15px;
-    }
-    .bg_produto .imagem img{
-        height: 100px;
-    }
-    .bg_produto .nome_produto{
-        height: auto;
+        height:430px;
+        
     }
     .bg_produto .nome_produto h2{
-        font-size: 15px;
+        font-size:14px;
     }
-    .bg_produto .preco_produto{
-        font-size: 15px;
+    .preco_produto h2{
+        font-size: 19px;
     }
-    .add_carrinho{
-        width: 120px; 
+    .bg_produto .imagem img{
+        height: 200px;
     }
     .add_carrinho h2{
-        font-size: 15px;
+        font-size: 13px;
     }
-    .add_carrinho img{
+    .add_carrinho .imagem_cart img{
         height: 20px;
     }
     .botao_filtrar{ /*Botoes de filtro ex: cerveja, vodka, whiskey*/
