@@ -1,5 +1,5 @@
 <?php 
-    include "db/connection.php";
+    include "../db/connection.php";
 
 ?>
 
@@ -10,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Point</title>
-    <link rel="stylesheet" href="/Principal/style.css">
-    <link rel="stylesheet" href="/Principal/responsivo.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
  
 
