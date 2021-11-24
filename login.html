@@ -17,18 +17,19 @@
         <br><br>
         <h2>Login</h2>
         <br>
-        <p>E-mail</p>
-        <input class="email" type="text" placeholder="Digite seu email" data-val="True" name="email">
-        <br><br>
-        <p>Senha</p>
-        <input class="password" type="password" placeholder="Digite sua senha" id="myInput">
-        <div class="mostrarSenha">
-            <input type="checkbox" onclick="myFunction()"> <p>Mostrar senha</p>
-        </div>
+        <form action="" method="post">
+            <label for="email"><p>E-mail</p></label> 
+            <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email">
+            <br><br>
+            <label for="myInput"><p>Senha</p></label> 
+            <input class="password" type="password" placeholder="Digite sua senha" id="myInput">
+            <div class="mostrarSenha">
+                <input type="checkbox" onclick="myFunction()"> <p>Mostrar senha</p>
+            </div>
+        </form>
         <br><br>
         <div class="botao">
             <button class="entrar" type="submit">Entrar</button>
-            
             <a href="/Principal/index.html"><button class="voltar" type="submit">Voltar</button></a>
         </div>      
         <br><br> 
