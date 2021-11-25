@@ -1,5 +1,5 @@
 <?php
-    include "../db/connection.php";
+    include "../../db/connection.php";
 
 ?>
 
@@ -31,6 +31,24 @@
                 </div>
             </fieldset> 
 
+            <div>
+                <label for="categories"><strong>Categoria</strong></label>
+                <select name="categories">
+                    <?php
+                        $sql = "SELECT * FROM categories";
+
+                        $stm_sql = $db_connection->prepare($sql);
+                        $stm_sql->execute();
+  
+                        $categories = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
+
+                        foreach($categories as $category){
+                            echo "<option value='".$category['id_category']."'>".$category['name']."</option>";
+                        }
+                    ?>
+                </select>
+            </div>
+
             <div class="campo">
                 <br>
                 <label for="Descriçao"><strong>Descrição:</strong></label>
@@ -53,7 +71,7 @@
             </div>
 
             <div>
-            <button class="botao2" type="submit" onsubmit="">Voltar</button>
+            <button class="botao2" >Voltar</button>
             </div>
 
             <div>

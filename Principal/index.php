@@ -13,9 +13,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsivo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
- 
-
-
 </head>
 <body>
     <header>
@@ -105,63 +102,32 @@
         </div><!--botão filtrar bebidas-->
 
         <div class="produtos">
-            <div class="bg_produto">
-                <div class="imagem">
-                    <img src="/imagens_produtos/Jack.png" alt="" >
-                </div>
-                <div class="nome_produto">
-                    <h2>Whiskey Jack Daniels</h2>
-                </div>
-                <div class="preco_produto">
-                    <h2>R$ 135,98</h2>
-                </div>
-                <div class="add_carrinho">
-                    <button>
-                        <h2>Adicionar</h2>
-                        <div class="imagem_cart">
-                            <img src="/images/img_carrinho.png" alt="" height="30px">
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="bg_produto">
-                <div class="imagem">
-                    <img src="/imagens_produtos/coca.png" alt="">
-                </div>
-                <div class="nome_produto">
-                    <h2>Refrigerante Coca Cola 2L</h2>
-                </div>
-                <div class="preco_produto">
-                    <h2>R$ 8,99</h2>
-                </div>
-                <div class="add_carrinho">
-                    <button>
-                        <h2>Adicionar</h2>
-                        <div class="imagem_cart">
-                            <img src="/images/img_carrinho.png" alt="" height="30px">
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="bg_produto">
-                <div class="imagem">
-                    <img src="/imagens_produtos/Red_label.png" alt="">
-                </div>
-                <div class="nome_produto">
-                    <h2>Whiskey Johnnie Walker Red Label</h2>
-                </div>
-                <div class="preco_produto">
-                    <h2>R$ 120,99</h2>
-                </div>
-                <div class="add_carrinho">
-                    <button>
-                        <h2>Adicionar</h2>
-                        <div class="imagem_cart">
-                            <img src="/images/img_carrinho.png" alt="" height="30px">
-                        </div>
-                    </button>
-                </div>
-            </div>
+            <?php
+                $sql = "SELECT * FROM products";
+                $stm_sql = $db_connection->prepare($sql);
+                $stm_sql->execute();
+                $products = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
+
+                if ($products > 0) {
+                   foreach ($products as $product) {
+                       echo "<div class='bg_produto'>";
+                       echo "<div class='imagem'> <img src='../Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
+                       echo "<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
+                       echo "<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";
+                       echo "<div class='add_carrinho'>
+                                <button>
+                                    <h2>Adicionar</h2>
+                                    <div class='imagem_cart'>
+                                        <img src='../images/img_carrinho.png' alt=' height='30px'>
+                                    </div>
+                                </button>
+                            </div>";
+                       echo "</div>";
+                   }
+                }
+           
+           ?>
+
         </div><!--produtos-->
 
         <div class="card_curiosities">
