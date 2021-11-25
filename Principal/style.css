@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 body{
     background-color: white;
@@ -41,13 +40,6 @@ header{
     text-decoration: none;
     padding: 5px 10px;
 }
-.banner{
-    text-align: center;
-    margin-top: 15px;
-}
-.banner img{
-    width: 80%; 
-}
 .botao_filtrar{ /*Botoes de filtro ex: cerveja, vodka, whiskey*/
     margin-top: 50px;
     display: flex;
@@ -75,52 +67,59 @@ header{
     flex-wrap: wrap; /*Se nao couber em uma linha, pule para a de baixo*/
     margin-top: 80px;
 }
+
 .bg_produto{
     background-color: #000000;
     border-radius: 20px;
     width: 200px;
+    height: 540px;
     text-align: center;
     padding: 5px 5px 0;
     margin: 20px 20px;
     cursor: pointer;
 }
 .bg_produto:hover{
-    transform: scale(1.03); 
+    transform: scale(1.02); 
     transition: 0.5s;
 }
 .bg_produto .imagem{
     background-color: white;
     width: 95%;
     margin: 0 auto;
-    border-radius: 20px;    
+    border-radius: 20px;
+    max-height: 300px;
 }
 
 .bg_produto .imagem img{
     height: 300px;
-    max-width: 150px;
+    max-width: 100%;
     margin: 0 auto;
+    object-fit: contain;
 }
 .nome_produto{
-    overflow: auto;
+    overflow:auto;
+    text-align: center;
 }
 .nome_produto h2{
     font-size: 20px;
     margin-top: 20px;
     height: 80px;
-    color: #fa8125;
-    font-family: Merriweather, serif;
+    color: #d3d3d3;
+    font-family: 'Open Sans', sans-serif;
 }
 .preco_produto h2{
     margin-top: 10px;
     font-weight: normal;
-    color: #fc7334;
+    color: #9bfc5a;
+    
 }
+
 /*Botão de adicionar ao carrinho*/
 .add_carrinho{
-    width: 200px;
-    margin-left: -5px;
+    width: 95%;
+    margin: 0 auto;
     margin-top: 20px;
-    background-color: rgba(255, 146, 46, 1);
+    background-color: #ff8723;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -129,15 +128,19 @@ header{
     position: relative;
     top: 10px;
 }
+.add_carrinho:hover{
+    border: 1px solid #ffffff;
+}
 .add_carrinho h2{
     color: white;
-    font-size: 30px;
+    font-size: 27px;
     position: relative;
     top: 5px;
 }
 .add_carrinho .imagem_cart{
     margin-top: 10px;
     margin-left: 15px;
+    
 }
 .add_carrinho button{
     width: 100%;
@@ -146,9 +149,10 @@ header{
     text-align: center;
     cursor: pointer;
     border: none;
-    background-color: rgba(255, 146, 46, 1);
+    background-color: #ff8723;
 }
 /*Botão de adicionar ao carrinho*/
+
 
 .card_curiosities{
     background-color: rgb(255, 255, 255);
@@ -160,18 +164,15 @@ header{
 .card_curiosities .title {
     text-align: center;
     color: rgb(0, 0, 0);
-    font-family: Merriweather, serif;
+    
 }
-
-/* The flip box container*/
 .flip-box {
     background-color: transparent;
     width: 300px;
     height: 200px;
     margin: 10px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px; /* 3D effect */
 }
-  /* This container is needed to position the front and back side */
 .flip-box-inner {
     position: relative;
     width: 100%;
@@ -209,6 +210,11 @@ header{
     color: rgb(0, 0, 0);
     transform: rotateY(180deg);
 }
+.flip-box-back p{
+    font-size: 14px;
+    text-align:justify;
+    margin: 10px;
+}
 .flip-box:hover .flip-box-inner {
     transform: rotateX(180deg);
 }
@@ -224,9 +230,6 @@ header{
     margin-top: 10px;
 }
 
-
-
-
 /*Rodapé*/
 footer{
     width: 100%;
@@ -238,24 +241,31 @@ footer{
     justify-content: space-around;
     margin-top: 50px;
     border-top: 2px solid rgb(255, 102, 0);
+    
 }
+
 footer .social a{
     text-decoration: none;   
 }
+
 footer .social a i{
     font-size: 40px;
     margin-top: 15px;
-    margin: 5px;   
+    margin: 5px;
+        
 }
 footer .social h2{
-    margin-left: 5px;     
+    margin-left: 5px;
+        
 }
+
 footer .social a #face{
     color: rgb(60, 60, 253);
 }
 footer .social a #insta{
     color: rgb(199, 0, 133);
 }
+
 footer p{
     color: white;
     margin: 5px ;
@@ -271,18 +281,22 @@ footer h2{
 footer .social{
     width: 25%;
     text-align: center;
+
 }
 footer .team{
     width: 25%;
+
 }
 footer .location{
     width: 50%;
     text-align: center;
+
 }
 footer .location p{
     margin-top: 10px;
     text-align:left;
 }
+
 
 @media screen and (max-width: 700px) {
     footer p{
@@ -328,7 +342,8 @@ footer .location p{
         font-size: 10px
     }
     footer .social a i{
-        font-size: 15px;  
+        font-size: 15px;
+        
     }
 }
 /*Rodapé*/
@@ -419,6 +434,3 @@ to {opacity: 1}
         font-size: 10px;
         }
 }
-
-
-
