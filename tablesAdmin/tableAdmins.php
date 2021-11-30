@@ -59,9 +59,9 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
             <tbody>
                 <?php while($dado = $con->fetch(PDO::FETCH_ASSOC)){?>
                 <tr>
-                    <td><?php echo $dado["iduser"];  ?>;</td>
-                    <td><?php echo $dado["name"]; ?></td>
-                    <td><?php echo $dado["email"]; ?></td>
+                    <td><?php echo $dado["iduser"];  ?></td>
+                    <td><?php echo $dado["name"];    ?></td>
+                    <td><?php echo $dado["email"];   ?></td>
                     <?php } ?>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
                     <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
