@@ -24,7 +24,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
 <body>
     <header>
         <div class="logo">
-            <img src="/images/Logo_point.png" alt="Logo">
+            <img src="../images/Logo_point.png" alt="Logo">
         </div>
         <div class="popup" onclick="myFunction()">
             <i class="fas fa-ellipsis-v"></i>
