@@ -23,7 +23,7 @@
             <div class="popup" onclick="myFunction()">
                 <p class="myAccount">Acessar <br> <strong>Minha conta</strong></p>
                 <div class="popuptext" id="myPopup">
-                    <a href="/login/login.html"><p class="toEnter">Entrar</p></a>
+                    <a href="../user/login/login.php"><p class="toEnter">Entrar</p></a>
                     <br>
                     <a href=""><p>Meu perfil</p></a>
                     <br>
