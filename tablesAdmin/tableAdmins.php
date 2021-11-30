@@ -64,7 +64,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
                     <td><?php echo $dado["email"]; ?></td>
                     <?php } ?>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
-                    <?php echo'<td><a href="delete.php?id=$dado["iduser"]"><i class="fas fa-trash-alt"></i></a></td>';?>
+                    <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
 
                 </tr>
             </tbody>
