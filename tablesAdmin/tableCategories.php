@@ -56,7 +56,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
                 <td >Excluir</td>
             </thead>
             <tbody>
-            <?php while($dado = $con->fetch_array()){?>
+            <?php while($dado = $con->fetch()){?>
                 <tr>
                     <td><?php echo $dado["id_category"];  ?>;</td>
                     <td><?php echo $dado["name"]; ?></td>

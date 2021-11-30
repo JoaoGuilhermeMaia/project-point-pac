@@ -5,6 +5,8 @@ include("../db/connection.php");
 $consulta = "SELECT * FROM users";
 $con = $db_connection->query($consulta) or die($db_connection->error);
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -55,17 +57,17 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
                 <td >Excluir</td>
             </thead>
             <tbody>
-                <?php while($dado = $con->fetch_array()){?>
+                <?php while($dado = $con->fetch(PDO::FETCH_ASSOC)){?>
                 <tr>
                     <td><?php echo $dado["iduser"];  ?>;</td>
                     <td><?php echo $dado["name"]; ?></td>
                     <td><?php echo $dado["email"]; ?></td>
+                    <?php } ?>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
-                    <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
-                </tr>
-                <?php } ?>
-            </tbody>
+                    <?php echo'<td><a href="delete.php?id=$dado["iduser"]"><i class="fas fa-trash-alt"></i></a></td>';?>
 
+                </tr>
+            </tbody>
         </table>
     </div>
 
