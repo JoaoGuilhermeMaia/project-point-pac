@@ -21,7 +21,7 @@
             <img src="../images/Logo_point.png" alt="Logo">
         </div>
         <div class="main_header">
-            <div class="popup" onclick="myFunction()">
+            <div class="popup" onclick="myFunctionPopup()">
                 <p class="myAccount">Acessar <br> <strong>Minha conta</strong></p>
                 <div class="popuptext" id="myPopup">
                     <a href="login.html"><p class="toEnter">Entrar</p></a>
@@ -232,7 +232,7 @@
         }
 
         /* header */
-        function myFunction() {
+        function myFunctionPopup() {
             var popup = document.getElementById("myPopup");
             popup.classList.toggle("show");
         }
