@@ -11,7 +11,15 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/images/Logo_point.png" alt="logo" >
+            <img src="/images/Logo_point.png" alt="Logo">
+        </div>
+        <div class="popup" onclick="myFunction()">
+            <i class="fas fa-ellipsis-v"></i>
+            <div class="popuptext" id="myPopup">
+                <a href=""><p>Meu perfil</p></a>
+                <br>
+                <a href=""><p class="exit">Sair</p></a>
+            </div>
         </div>
     </header>
 
@@ -62,6 +70,13 @@
                 }
             }
         }
+
+        
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+    
     </script>
 </body>
 </html>

@@ -31,6 +31,7 @@
 #btn:checked ~ .menu-btn{
     right: 247px;
 }
+
 .wrapper .menu-btn i{
     position: absolute;
     font-size: 23px;
@@ -58,7 +59,7 @@
     transition: all 0.3s ease;
     border-radius: 0 0px 0 10px;
 }
-  #btn:checked ~ #sidebar{
+#btn:checked ~ #sidebar{
     right: 0;                     /*left 0 faz vir da esquerda e right 0 da direita*/
 }
 #sidebar .title{
@@ -70,7 +71,6 @@
     color: #f2f2f2;
     border-bottom: 1px solid #222;
     padding: 10px 0;
-    
 }
 #sidebar .list-items{
     position: relative;
@@ -197,7 +197,13 @@
     .wrapper{              /*Button responsive navbar*/
         display: flex; 
     }
-    .menu p, a img{         /*Some */
+    header .main_header .popup .myAccount{
+        display: none;
+    }
+    header .main_header  .cart{
+        display: none;
+    }
+    .popup{
         display: none;
     }
 }
@@ -214,7 +220,6 @@
     .botao_filtrar p{
         font-size: 12px;
     }
-    
     .bg_produto{
         width: 150px;
         height:440px;
