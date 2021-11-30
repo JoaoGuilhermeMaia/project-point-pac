@@ -1,3 +1,12 @@
+<?php 
+
+include("../db/connection.php");
+
+$consulta = "SELECT * FROM products";
+$con = $db_connection->query($consulta) or die($db_connection->error);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -38,6 +47,7 @@
     <div class="tableProducts">
         <table>
             <thead>
+                <td >Código</td>
                 <td style="width: 25%;">Nome</td>
                 <td style="width: 25%;">Categoria</td>
                 <td style="width: 25%;">Preço</td>
@@ -45,13 +55,15 @@
                 <td >Excluir</td>
             </thead>
             <tbody>
+            <?php while($dado = $con->fetch_array()){?>
                 <tr>
-                    <td>Whiskey Johnnie Walker Red Label</td>
-                    <td>Whiskey</td>
-                    <td>R$ 129,90</td>
+                    <td><?php echo $dado["category_id"];  ?>;</td>
+                    <td><?php echo $dado["name"]; ?></td>
+                    <td><?php echo $dado["value"]; ?></td>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
                     <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
-                </tr>                
+                </tr>
+                <?php } ?>               
             </tbody>
         </table>
     </div>
