@@ -79,26 +79,20 @@
         <!--Slider banners-->
 
         <div class="botao_filtrar">
-            <button class="filtrar" >
-                <img src="/images_BT/BT_cerveja.png" alt="" height="100px">
-                <p>Cerveja</p>
-            </button>
-            <button class="filtrar" >
-                <img src="/images_BT/BT_whiskey.png" alt="" height="100px">
-                <p>Whiskey</p>
-            </button>
-            <button class="filtrar" >
-                <img src="/images_BT/BT_vodka.png" alt="" height="100px">
-                <p>Vodka</p>
-            </button>
-            <button class="filtrar" >
-                <img src="/images_BT/BT_vinho.png" alt="" height="90px">
-                <p>Vinho</p>
-            </button>
-            <button class="filtrar" >
-                <img src="/images_BT/BT_refrigerante.png" alt="" height="95px">
-                <p>Refrigerante</p>
-            </button>
+           <?php
+                $sql = "SELECT * FROM categories";
+                $stm_sql = $db_connection->prepare($sql);
+                $stm_sql->execute();
+                $categories = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
+
+                if(count($categories) > 0){
+                    foreach($categories as $category){          
+                        echo "<button class='filtrar' ><img src='../Cadastro de categoria/image/image".$category['image']."' alt='' height='95px'>
+                        <p>".$category['name'] ."</p>
+                        </button>";
+                }
+            }
+           ?>
         </div><!--botão filtrar bebidas-->
 
         <div class="produtos">
@@ -108,7 +102,7 @@
                 $stm_sql->execute();
                 $products = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
 
-                if ($products > 0) {
+                if (count($products) > 0) {
                    foreach ($products as $product) {
                        echo "<div class='bg_produto'>";
                        echo "<div class='imagem'> <img src='../Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
