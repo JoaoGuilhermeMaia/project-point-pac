@@ -93,7 +93,7 @@ header .main_header .cart a i{
     border-color: rgb(255, 255, 255) transparent transparent transparent;
 }
 .popup .show {
-    visibility: visible;
+    visibility:visible;
     -webkit-animation: fadeIn 0.4s;
     animation: fadeIn 0.4s;
 }

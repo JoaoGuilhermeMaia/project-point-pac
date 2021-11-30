@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Point</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon"><!--icone favicon-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsivo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -17,13 +18,14 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/images/Logo_point.png" alt="Logo">
+            <img src="../images/Logo_point.png" alt="Logo">
         </div>
         <div class="main_header">
-            <div class="popup" onclick="myFunction()">
+            <div class="popup" onclick="myFunctionPopup()">
                 <p class="myAccount">Acessar <br> <strong>Minha conta</strong></p>
                 <div class="popuptext" id="myPopup">
                     <a href="../user/login/login.php"><p class="toEnter">Entrar</p></a>
+
                     <br>
                     <a href=""><p>Meu perfil</p></a>
                     <br>
@@ -65,16 +67,16 @@
         <!--Slider banners-->
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="/images/Banner1.jpg" style="width:100%">
+                <img src="../images/Banner1.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="/images/Banner2.jpg" style="width:100%">
+                <img src="../images/Banner2.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="/images/Banner3.jpg" style="width:100%">
+                <img src="../images/Banner3.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="/images/Banner4.jpg" style="width:100%">
+                <img src="../images/Banner4.jpg" style="width:100%">
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -228,12 +230,12 @@
             }
             slides[slideIndex-1].style.display = "block";  
             dots[slideIndex-1].className += " active";
+        }
 
-            /* header */
-            function myFunction() {
+        /* header */
+        function myFunctionPopup() {
             var popup = document.getElementById("myPopup");
             popup.classList.toggle("show");
-            }
         }
     </script>
 
