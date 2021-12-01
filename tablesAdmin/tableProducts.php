@@ -68,13 +68,11 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
         </table>
     </div>
 
-    
     <script>
         function myFunction() {
           var popup = document.getElementById("myPopup");
           popup.classList.toggle("show");
         }
     </script>
-
 </body>
 </html>

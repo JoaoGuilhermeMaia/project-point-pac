@@ -10,16 +10,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon"><!--icone favicon-->
+    <link rel="stylesheet" href="cadastroProduto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
 </head>
 
 <body>  
     <footer>
-        <header>
-            <div class="logo">
-                <img src="imagem/Logo_point.png" alt="" height="70px">
-            </div>
-        </header>
         <h1 id="titulo">Cadastro de Produtos</h1>
   
         <form action="insProduct.php" method="POST" enctype="multipart/form-data">
@@ -80,5 +78,64 @@
            
         </form>
     </footer>  
+
+
+
+
+
+
+    <header>
+        <div class="logo">
+            <img src="../../images/Logo_point.png" alt="Logo">
+        </div>
+        <div class="popup" onclick="myFunction()">
+            <i class="fas fa-ellipsis-v"></i>
+            <div class="popuptext" id="myPopup">
+                <a href=""><p>Meu perfil</p></a>
+                <br>
+                <a href=""><p class="exit">Sair</p></a>
+            </div>
+        </div>
+    </header> 
+
+    <div class="main_product">
+        <div class="registration_product">
+            <h2>Cadastro de Produto</h2>
+        </div>
+        <div class="center_product">
+            <div class="name_product">
+                <label for="nome"><strong>Nome do Produto:</strong></label>
+                <input type="text" name="name" id="nome">
+            </div>
+            <div class="input_img">
+                <i class="fas fa-file-upload"></i>
+                <div class="file_selection">
+                    <label for='arquivo'>Selecionar um arquivo &#187;</label>
+                    <input name="imageCategory" type="file" id="arquivo" onchange="return validarArquivo()">  
+                </div>            
+            </div>  
+        </div>
+    </div>
+
+
+
+
+
+    <form action="insProduct.php" method="POST" enctype="multipart/form-data">
+    
+    </form>
+
+
+
+
+
+
+    <script>
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+    </script>
+    
 </body>
 </html>
