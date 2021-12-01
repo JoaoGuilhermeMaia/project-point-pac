@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 body{
     background-color: rgb(218, 218, 218);
@@ -13,10 +14,10 @@ header{
     justify-content: space-between;
 }
 header .logo img{
-    height: 60px;
+    height: 50px;
 }
 header .logo{
-    padding: 10px;
+    padding: 10px 20px;
 }
 header .popup i{
     margin: 20px 40px;
@@ -92,7 +93,6 @@ header .popup i{
     border-radius: 10px;
     margin-bottom: 50px;
     background-color: rgb(255, 255, 255);
-    padding: 20px;
 }
 
 .registration_product{
@@ -112,15 +112,38 @@ header .popup i{
 .main_product .center_product{
     display: flex;
     justify-content: space-evenly;
-   
+    flex-wrap: wrap;
+    align-items: center;
     padding: 20px;
+}
+
+
+.input_product{
+    padding: 10px 50px;
+    margin-bottom: 20px;
     
+}
+.input_product input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+}
+.description_product textarea{
+    margin-top: 10px;
+    border-radius: 10px;
+    max-width: 200px;
+    max-height: 100px;
+    padding: 10px;
 }
 
 
 
-
 .input_img{
+    border-radius: 10px;
     height: 270px;
     border: 1px solid black;
     text-align: center;
@@ -151,3 +174,21 @@ header .popup i{
     color: rgb(190, 190, 190);
 }
 
+
+.registrationButton{
+    text-align: center;
+    margin-top: 20px;
+}
+.registrationButton button{
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #ff9900;
+    border: none;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+.registrationButton button:hover {
+    background-color: #ffaf38;
+  }

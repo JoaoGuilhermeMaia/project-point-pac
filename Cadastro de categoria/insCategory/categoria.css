@@ -14,10 +14,10 @@ body{
     justify-content: space-between;
 }
 header .logo img{
-    height: 60px;
+    height: 50px;
 }
 header .logo{
-    padding: 10px;
+    padding: 10px 20px;
 }
 header .popup i{
     margin: 20px 40px;
@@ -122,7 +122,6 @@ header .popup i{
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 40px;
-    
 }
 .center_category .name_category p{
     font-size: 25px;
@@ -142,12 +141,12 @@ header .popup i{
     border-bottom: 1px solid black;
 }
 .input_img{
+    border-radius: 10px;
     height: 270px;
     border: 1px solid black;
     text-align: center;
     background-color: rgb(216, 216, 216);
     margin: 0 10px;
-    
 }
 .file_selection{
     margin-top: 50px;
@@ -187,8 +186,8 @@ header .popup i{
 }
 
 .registrationButton button:hover {
-    background-color: #db8400;
-  }
+    background-color: #ffaf38;
+}
 @media screen and (max-width:450px){
     .center_category .name_category input{
         width: 250px;
