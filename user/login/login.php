@@ -20,7 +20,7 @@
         <br>
         <form action="" method="post" name="formulario">
             <label for="email"><p>E-mail</p></label> 
-            <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email" onblur="checarEmail()">
+            <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email" >
             <br><br>
             <label for="passwordClient"><p>Senha</p></label> 
             <input class="password" type="password" placeholder="Digite sua senha" id="passwordClient" name="password">

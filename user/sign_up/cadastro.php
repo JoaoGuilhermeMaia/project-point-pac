@@ -59,7 +59,7 @@
 
         function validar(){
             var name = formulario.name;
-            var email = formulario.email;
+            
             var password = formulario.password;
             var confPassword = formulario.confPassword
 
@@ -68,11 +68,13 @@
                 name.focus();
                 return;
             }
-            if(email.value == "") {
-                alert("Email não informado");
-                email.focus();
-                return;
-            }
+            if( document.forms[0].email.value=="" 
+                || document.forms[0].email.value.indexOf('@')==-1 
+                || document.forms[0].email.value.indexOf('.')==-1 ) {
+	            alert( "Por favor, informe um E-MAIL válido!" );
+                email.focus()
+	            return false;
+	        }
             if(password.value == "") {
                 alert("Senha não informada");
                 password.focus();
