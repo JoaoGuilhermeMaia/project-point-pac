@@ -18,19 +18,19 @@
         <br><br>
         <h2>Login</h2>
         <br>
-        <form action="" method="post">
+        <form action="" method="post" name="formulario">
             <label for="email"><p>E-mail</p></label> 
-            <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email">
+            <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email" onblur="checarEmail()">
             <br><br>
-            <label for="myInput"><p>Senha</p></label> 
-            <input class="password" type="password" placeholder="Digite sua senha" id="myInput">
+            <label for="passwordClient"><p>Senha</p></label> 
+            <input class="password" type="password" placeholder="Digite sua senha" id="passwordClient" name="password">
             <div class="mostrarSenha">
                 <input type="checkbox" onclick="myFunction()"> <p>Mostrar senha</p>
             </div>
         </form>
         <br><br>
         <div class="botao">
-            <button class="entrar" type="submit">Entrar</button>
+            <button id="entrar" class="entrar" type="submit"  onclick="validar()">Entrar</button>
             <a href="/Principal/index.html"><button class="voltar" type="submit">Voltar</button></a>
         </div>      
         <br><br> 
@@ -40,16 +40,31 @@
     </div>
 
     <script>
+        function validar(){
+            var email = formulario.email;
+            var password = formulario.password;
+            if( document.forms[0].email.value=="" 
+                || document.forms[0].email.value.indexOf('@')==-1 
+                || document.forms[0].email.value.indexOf('.')==-1 ) {
+	            alert( "Por favor, informe um E-MAIL válido!" );
+                email.focus()
+	            return false;
+	        }
+            if(password.value == "") {
+                alert("Senha não informada");
+                password.focus();
+                return;
+            }
+        }
         function myFunction() {
-            var x = document.getElementById("myInput");
+            var x = document.getElementById("passwordClient");
             if (x.type === "password") {
                 x.type = "text";
             } else {
                 x.type = "password";
             }
         }
-    </script>
 
-    
+    </script>
 </body>
 </html>

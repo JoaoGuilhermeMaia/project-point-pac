@@ -19,34 +19,35 @@
         <br><br>
         <h2>Cadastro</h2>
         <br>
-        <form action="" method="post">
+        <form action="" method="POST" id="formulario" name="formulario">
             <label for="name"><p>Nome completo</p></label>
             <input  id="name" class="name" type="text" placeholder="Digite seu nome" data-val="True" name="name">
             <br><br>
             <label for="email"> <p>E-mail</p></label>
             <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email">
             <br><br>
-            <label for="myInput"><p>Senha</p></label> 
-            <input class="password" type="password" placeholder="Digite sua senha" id="myInput">
+            <label for="password"><p>Senha</p></label> 
+            <input class="password" type="password" placeholder="Digite sua senha" id="password" name="password">
             <br><br>
-            <label for="myInput1"><p>Confirmar senha</p></label> 
-            <input class="password" type="password" placeholder="Confirme sua senha" id="myInput1">
+            <label for="confPassword"><p>Confirmar senha</p></label> 
+            <input class="password" type="password" placeholder="Confirme sua senha" id="confPassword" name="confPassword">
             <div class="mostrarSenha">
                 <input type="checkbox" onclick="myFunction()"> <p>Mostrar senha</p>
             </div>
-        </form>
-        <br><br>
-        <div class="botao">
-            <button class="cadastrar" type="submit">Cadastrar</button>
-            <a href="/Principal/index.html"><button class="voltar" type="submit">Voltar</button></a>
-        </div>      
+            <br><br>
+        </form>  
+            <div class="botao">
+                <button class="cadastrar" type="submit" onclick="validar()">Cadastrar</button>
+                <a href="../../Principal/index.php"><button class="voltar" type="submit">Voltar</button></a>
+            </div>   
+         
     </div>
 
 
     <script>
         function myFunction() {
-            var x = document.getElementById("myInput");
-            var y = document.getElementById("myInput1");
+            var x = document.getElementById("password");
+            var y = document.getElementById("confPassword");
             if (x.type === "password" && y.type === "password") {
                 x.type = "text";
                 y.type = "text";
@@ -55,6 +56,40 @@
                 y.type = "password";
             }
         }
+
+        function validar(){
+            var name = formulario.name;
+            var email = formulario.email;
+            var password = formulario.password;
+            var confPassword = formulario.confPassword
+
+            if(name.value == "") {
+                alert("Nome não informado");
+                name.focus();
+                return;
+            }
+            if(email.value == "") {
+                alert("Email não informado");
+                email.focus();
+                return;
+            }
+            if(password.value == "") {
+                alert("Senha não informada");
+                password.focus();
+                return;
+            }
+            if(confPassword.value == "") {
+                alert("Confirme sua senha!");
+                confPassword.focus();
+                return;
+            }
+            if(confPassword.value != password.value){
+                alert("As Senhas não são iguais");
+                confPassword.focus();
+                return;
+            }
+        }
+        
     </script>
     
 </body>
