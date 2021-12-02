@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon"><!--icone favicon-->
     <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
 
     <header>
-        <img src="/images/Logo_point.png" alt="logo" height="60px">
+        <img src="../../images/Logo_point.png" alt="logo" height="60px">
     </header>
    
     <div class="main">
-        <img src="/images/Logo_point.png" alt="" height="80px">
+        <img src="../../images/Logo_point.png" alt="" height="80px">
         <br><br>
         <h2>Cadastro</h2>
         <br>

@@ -15,7 +15,7 @@ header img{
     margin-top: 10px;
 }
 body{
-    background-image: url(/images/background_login.jpg);
+    background-image: url(../../images/background_login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
