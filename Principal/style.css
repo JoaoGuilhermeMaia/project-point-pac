@@ -231,6 +231,9 @@ to {opacity: 1}
     flex-wrap: wrap; /*Se nao couber em uma linha, pule para a de baixo*/
     margin-top: 80px;
 }
+.bg_produto a{
+    text-decoration: none;
+}
 
 .bg_produto{
     background-color: #000000;
