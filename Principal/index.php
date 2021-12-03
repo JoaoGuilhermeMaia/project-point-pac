@@ -115,13 +115,13 @@
 
                 if (count($products) > 0) {
                    foreach ($products as $product) {
-                       echo "<div class='bg_produto'>";
+                       echo"<div class='bg_produto'>";
                        echo"<a href=''>";
-                       echo "<div class='imagem'> <img src='../Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
-                       echo "<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
-                       echo "<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";
+                       echo"<div class='imagem'> <img src='../Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
+                       echo"<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
+                       echo"<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";
                        echo"</a>";
-                       echo "<div class='add_carrinho'>
+                       echo"<div class='add_carrinho'>
                                 <button>
                                     <h2>Adicionar</h2>
                                     <div class='imagem_cart'>
@@ -129,8 +129,7 @@
                                     </div>
                                 </button>
                             </div>";
-                            
-                        echo'</div>';   
+                        echo"</div>";   
                    }
                 }
            ?>
