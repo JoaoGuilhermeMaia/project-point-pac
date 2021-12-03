@@ -71,7 +71,7 @@
                     <div class="value_product">
                         <label for="valor"><strong>Valor do Produto:</strong></label>
                         <br>
-                        <input type="number" name="value-product" id="valor" required placeholder="R$ ">
+                        <input type="number" name="value-product" id="valor" required placeholder="R$ " min="0" value="0" step=".01">
                     </div>
                 </div>           
                 

@@ -11,7 +11,7 @@ header{
     height: 90px;
 }
 header img{
-   padding: 20px;
+    padding: 20px;
 }
 body{
     background-image: url(../../images/background_login.jpg);
@@ -33,7 +33,6 @@ body{
 }
 .main img{
     text-align: center;
-    
 }
 .main h2{
     color: rgb(255, 106, 0);
@@ -120,7 +119,6 @@ body{
     .main{
         width: 350px;
     }
-
     .main h2{
         color: rgb(151, 145, 145);
     }

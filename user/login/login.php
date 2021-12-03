@@ -35,7 +35,7 @@
         </div>      
         <br><br> 
         <div class="cadastro">
-            <a href="/cadastro/cadastro.html"><p>Não tem conta? Cadastre-se</p></a>
+            <a href="../sign_up/cadastro.php"><p>Não tem conta? Cadastre-se</p></a>
         </div>
     </div>
 

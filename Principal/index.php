@@ -98,7 +98,7 @@
 
                 if(count($categories) > 0){
                     foreach($categories as $category){          
-                        echo "<button class='filtrar' ><img src='../Cadastro de categoria/image/image".$category['image']."' alt='' height='95px'>
+                        echo "<button class='filtrar' ><img src='../Cadastro de categoria/imagem/image".$category['image']."' alt='' height='95px'>
                         <p>".$category['name'] ."</p>
                         </button>";
                 }

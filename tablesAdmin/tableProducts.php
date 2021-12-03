@@ -42,7 +42,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
 
     <h2>Produtos</h2>
     <div class="registerNew">
-            <a href=""><p>Cadastrar novo <i class="fas fa-plus-circle"></i></p></a>
+            <a href="../Cadastro de Produtos/insProduct/CadastroDeProdutos.php"><p>Cadastrar novo <i class="fas fa-plus-circle"></i></p></a>
     </div>
     <div class="tableProducts">
         <table>
@@ -57,9 +57,10 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
             <tbody>
             <?php while($dado = $con->fetch(PDO::FETCH_ASSOC)){?>
                 <tr>
-                    <td><?php echo $dado["category_id"];  ?>;</td>
-                    <td><?php echo $dado["name"]; ?></td>
-                    <td><?php echo $dado["value"]; ?></td>
+                    <td><?php echo $dado["category_id"];  ?></td>
+                    <td><?php echo $dado["name"];         ?></td>
+                    <td><?php echo $dado["category_id_category"];         ?></td>
+                    <td>R$ <?php echo $dado["value"];        ?></td>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
                     <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
