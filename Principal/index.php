@@ -115,6 +115,7 @@
 
                 if (count($products) > 0) {
                    foreach ($products as $product) {
+                       echo"<a href=''>";
                        echo "<div class='bg_produto'>";
                        echo "<div class='imagem'> <img src='../Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
                        echo "<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
@@ -128,11 +129,10 @@
                                 </button>
                             </div>";
                        echo "</div>";
+                       echo"</a>";
                    }
                 }
-           
            ?>
-
         </div><!--produtos-->
 
         <div class="card_curiosities">
