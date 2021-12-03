@@ -44,7 +44,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
 
     <h2>Categorias</h2>
     <div class="registerNew">
-        <a href="../Cadastro de categoria//insCategory//categoria.php"><p>Cadastrar novo <i class="fas fa-plus-circle"></i></p></a>
+        <a href="../Cadastro de categoria/insCategory/categoria.php"><p>Cadastrar novo <i class="fas fa-plus-circle"></i></p></a>
     </div>
     
     <div class="tableProducts">

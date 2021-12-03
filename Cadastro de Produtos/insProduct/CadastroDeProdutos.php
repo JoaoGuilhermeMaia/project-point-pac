@@ -90,18 +90,6 @@
     </div>
 
 
-
-
-
-    
-    
-    
-
-
-
-
-
-
     <script>
         function validarArquivo(){        
             var arquivoInput = document.getElementById('arquivo');

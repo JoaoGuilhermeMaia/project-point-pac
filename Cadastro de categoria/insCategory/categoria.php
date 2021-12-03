@@ -32,13 +32,13 @@
             <div class="center_category">
                 <div class="name_category">
                     <p>Nome da Categoria:</p>
-                    <input type="text" name="nameCategory">
+                    <input type="text" name="nameCategory" required>
                 </div>
                 <div class="input_img">
                     <i class="fas fa-file-upload"></i>
                     <div class="file_selection">
                         <label for='arquivo'>Selecionar um arquivo &#187;</label>
-                        <input name="imageCategory" type="file" id="arquivo" onchange="return validarArquivo()">  
+                        <input name="imageCategory" type="file" id="arquivo" onchange="return validarArquivo()" required>  
                     </div>            
                 </div>
             </div>
@@ -69,6 +69,9 @@
                         return false;
                     }
                 }
+            }
+            if(arquivoInput.value == ""){
+                alert("Selecione um arquivo'")
             }
         }
 
