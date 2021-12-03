@@ -123,7 +123,7 @@
                                 <button>
                                     <h2>Adicionar</h2>
                                     <div class='imagem_cart'>
-                                        <img src='../images/img_carrinho.png' alt=' height='30px'>
+                                        <img src='../images/img_carrinho.png' alt='' height='30px'>
                                     </div>
                                 </button>
                             </div>";
