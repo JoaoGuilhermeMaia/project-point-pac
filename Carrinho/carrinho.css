@@ -247,3 +247,20 @@ header .main_header .cart a i{
 .list-items .icons a:first-child{
     margin-left: 0px;
 }
+@media screen and (max-width: 480px){
+    .logo img{
+        height: 50px;
+    }
+    .wrapper{              /*Button responsive navbar*/
+        display: flex; 
+    }
+    header .main_header .popup .myAccount{
+        display: none;
+    }
+    header .main_header  .cart{
+        display: none;
+    }
+    .popup{
+        display: none;
+    }
+}

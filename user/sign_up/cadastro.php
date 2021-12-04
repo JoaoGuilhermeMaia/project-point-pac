@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <img src="../../images/Logo_point.png" alt="logo" height="60px">
+        <img src="../../images/Logo_point.png" alt="logo">
     </header>
    
     <div class="main">
@@ -71,7 +71,7 @@
             if( document.forms[0].email.value=="" 
                 || document.forms[0].email.value.indexOf('@')==-1 
                 || document.forms[0].email.value.indexOf('.')==-1 ) {
-	            alert( "Por favor, informe um E-MAIL válido!" );
+	            alert( "Por favor, informe um e-mail válido!" );
                 email.focus()
 	            return false;
 	        }
