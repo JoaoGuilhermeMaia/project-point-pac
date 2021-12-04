@@ -118,10 +118,12 @@ body{
 
 /* Responsivo */
 @media screen and (max-width:600px){
+    header img{
+        height: 80px;
+    }
     .main{
         width: 370px;
     }
-
     .main h2{
         color: rgb(151, 145, 145);
     }
@@ -130,7 +132,6 @@ body{
     .main{
         width: 350px;
     }
-
     .main h2{
         color: rgb(151, 145, 145);
     }
