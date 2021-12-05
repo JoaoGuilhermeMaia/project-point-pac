@@ -212,11 +212,17 @@ to {opacity: 1}
     
 }
 .botao_filtrar img{
-    cursor: pointer;    
+    cursor: pointer;  
+    border-radius: 55%;  
 }
 .botao_filtrar p{
     text-align: center;
 }
+
+.filtrar{
+    border-radius: 50%;
+}
+
 .botao_filtrar button{
     border: none;
     background: none;

@@ -21,6 +21,13 @@
             <img src="../images/Logo_point.png" alt="Logo">
         </div>
         <div class="main_header">
+
+            <?php
+                if(isset($_SESSION['sessionId'])){
+                    echo '<div class="header-message"> Olá, '.$_SESSION['name']. '!</div>';
+                }
+            ?>
+
             <div class="popup" onclick="myFunctionPopup()">
                 <p class="myAccount"><strong>Minha conta</strong></p>
                 <div class="popuptext" id="myPopup">
@@ -32,7 +39,7 @@
                     <br>
                     <a href=""><p>Meu perfil</p></a>
                     <br>
-                    <a href=""><p class="exit">Sair</p></a>
+                    <a href="../user/logoff/logout.php"><p class="exit">Sair</p></a>
                 </div>
             </div>
             <div class="cart">

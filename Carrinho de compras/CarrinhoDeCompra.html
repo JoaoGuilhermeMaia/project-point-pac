@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="Quantidade.js"></script>
+    <title>Carrinho</title>
+    
+    
+     <!--Aqui começa o header-->
+
+     <header>
+        <div class="logo">
+            <img src="imagem/Logo_point.png" alt="" height="60px">
+        </div>
+        <div class="menu">
+            <a href="#"><img src="imagem/img_account_circle.png" alt="" height="40px"></a>
+            <a href="#"><img src="imagem/img_carrinho.png" alt="" height="40px"></a>
+        </div>
+    </header><!--Fim do cabeçalho-->
+
+</head>
+<body>
+
+<div id="position">
+    <p class="CarrinhoTitulo">Carrinho</p>
+    <table id="table">
+        <tr class="line01">
+            <td>Produtos</td>
+            <td>Preço unitário</td>
+            <td>Quantidade</td>
+            <td>Subtotal</td>
+        </tr>
+        <tr class="line02">
+            <td><img src="imagem/whiskey01.png" alt="Whisck">
+             <p>Whiskey Jack Daniels 1L <br> Old No.7 Brand</p></td>
+             <td> valor:</td>
+             <td>
+             <div data-app="product.quantity" id="quantidade">
+                 <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>
+                 <label>Quantidade:</label>      
+                 <input type="button" id="plus" value='-' onclick="process(-1)" />
+                 <input id="quant" name="quant" class="text" size="1" type="text" value="1" maxlength="5" />
+                 <input type="button" id="minus" value='+' onclick="process(1)">
+              </div>
+             </td>
+        </tr>
+        <tr class="line03">
+            <th colspan="5">Subtotal:</th>
+        </tr>
+    </table>
+</div>
+    
+
+<input class="Continuar" type="button" value="CONTINUAR COMPRANDO">
+<input class="Finalizar" type="button" value="FINALIZAR COMPRA">
+
+
+
+    
+
+</body>
+</html>
+
+
