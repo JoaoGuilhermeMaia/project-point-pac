@@ -98,7 +98,7 @@
 
                 if(count($categories) > 0){
                     foreach($categories as $category){          
-                        echo "<button class='filtrar' ><img src='../Cadastro de categoria/image/image".$category['image']."' alt='' height='95px'>
+                        echo "<button class='filtrar' ><img src='../Cadastro de categoria/imagem/image".$category['image']."' alt='' height='95px'>
                         <p>".$category['name'] ."</p>
                         </button>";
                 }
@@ -115,24 +115,24 @@
 
                 if (count($products) > 0) {
                    foreach ($products as $product) {
-                       echo "<div class='bg_produto'>";
-                       echo "<div class='imagem'> <img src='../Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
-                       echo "<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
-                       echo "<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";
-                       echo "<div class='add_carrinho'>
+                       echo"<div class='bg_produto'>";
+                       echo"<a href=''>";
+                       echo"<div class='imagem'> <img src='../Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
+                       echo"<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
+                       echo"<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";
+                       echo"</a>";
+                       echo"<div class='add_carrinho'>
                                 <button>
                                     <h2>Adicionar</h2>
                                     <div class='imagem_cart'>
-                                        <img src='../images/img_carrinho.png' alt=' height='30px'>
+                                        <img src='../images/img_carrinho.png' alt='' height='30px'>
                                     </div>
                                 </button>
                             </div>";
-                       echo "</div>";
+                        echo"</div>";   
                    }
                 }
-           
            ?>
-
         </div><!--produtos-->
 
         <div class="card_curiosities">

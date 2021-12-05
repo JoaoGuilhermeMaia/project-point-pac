@@ -5,27 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon"><!--icone favicon-->
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <header>
-        <img src="/images/Logo_point.png" alt="logo" height="60px">
+        <img src="../../images/Logo_point.png" alt="logo" height="60px">
     </header>
    
     <div class="main">
-        <img src="/images/Logo_point.png" alt="" height="80px">
+        <img src="../../images/Logo_point.png" alt="" height="80px">
         <br><br>
         <h2>Login</h2>
         <br>
         <form action="../security/authentication.php" method="POST">
 
             <label for="email"><p>E-mail</p></label> 
-            <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email">
+            <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email" >
             <br><br>
-
-            <label for="myInput"><p>Senha</p></label> 
-            <input name="password" class="password" type="password" placeholder="Digite sua senha" id="myInput">
-
+            <label for="passwordClient"><p>Senha</p></label> 
+            <input class="password" type="password" placeholder="Digite sua senha" id="passwordClient" name="password">
             <div class="mostrarSenha">
                 <input type="checkbox" onclick="myFunction()"> <p>Mostrar senha</p>
             </div>
@@ -35,7 +34,8 @@
             </div>
         </form>
         <div class="botao">
-            <a href="/Principal/index.html"><button class="voltar">Voltar</button></a>
+            <button id="entrar" class="entrar" type="submit"  onclick="validar()">Entrar</button>
+            <a href="/Principal/index.html"><button class="voltar" type="submit">Voltar</button></a>
         </div>      
         <br><br> 
         <div class="cadastro">
@@ -44,16 +44,31 @@
     </div>
 
     <script>
+        function validar(){
+            var email = formulario.email;
+            var password = formulario.password;
+            if( document.forms[0].email.value=="" 
+                || document.forms[0].email.value.indexOf('@')==-1 
+                || document.forms[0].email.value.indexOf('.')==-1 ) {
+	            alert( "Por favor, informe um e-mail válido!" );
+                email.focus()
+	            return false;
+	        }
+            if(password.value == "") {
+                alert("Senha não informada");
+                password.focus();
+                return;
+            }
+        }
         function myFunction() {
-            var x = document.getElementById("myInput");
+            var x = document.getElementById("passwordClient");
             if (x.type === "password") {
                 x.type = "text";
             } else {
                 x.type = "password";
             }
         }
-    </script>
 
-    
+    </script>
 </body>
 </html>

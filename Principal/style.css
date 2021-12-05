@@ -231,6 +231,9 @@ to {opacity: 1}
     flex-wrap: wrap; /*Se nao couber em uma linha, pule para a de baixo*/
     margin-top: 80px;
 }
+.bg_produto a{
+    text-decoration: none;
+}
 
 .bg_produto{
     background-color: #000000;
@@ -328,7 +331,7 @@ to {opacity: 1}
 }
 .card_curiosities .title {
     text-align: center;
-    color: rgb(255, 116, 2);
+    color: rgb(0, 0, 0);
     letter-spacing: 4px;
     font-family: Merriweather, serif;
 }
