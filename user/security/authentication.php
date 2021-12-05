@@ -3,13 +3,33 @@
 
     $email    = $_POST['email'];
     $password = $_POST['password'];
-    
-    $sql = "SELECT * FROM users WHERE (email = :email, password = :password)";
+    $password = md5($password);
 
-    $stm_sql = $db_connection -> prepare($sql);
-    $stm_sql -> bindParam(':email', $email);
-    $stm_sql -> bindParam(':password', $password);
+    if(!empty($email) && !empty($password)){
+        $sql = "SELECT * FROM users WHERE (email = :email AND password = :password)";
 
-    $result = $stm_sql -> execute(PDO::FETCH_ASSOC);
+        $stm_sql = $db_connection -> prepare($sql);
+        $stm_sql -> bindParam(':email', $email);
+        $stm_sql -> bindParam(':password', $password);
 
+        $stm_sql->execute();
+        $result = $stm_sql-> fetchAll(PDO::FETCH_ASSOC);
+
+        if(count($result) > 0){
+
+            session_start();
+            $_SESSION = $result[0];
+            $_SESSION['sessionId'] = session_id();
+            
+            if($_SESSION['permission'] == 0){
+                header('Location: ../../Principal/index.php');
+            }else{
+                header('Location: ../../tablesAdmin/tableProducts.php');    
+            }
+        }else{
+            header('Location: ../login/login.php?error=1');
+        }
+    }else{
+        header('Location: ../login/login.php?error=2');
+    }
 ?>

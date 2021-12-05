@@ -18,8 +18,15 @@
         <br><br>
         <h2>Login</h2>
         <br>
+        <?php
+            if(isset($_GET['error']) && $_GET['error'] == 1){
+                echo '<p class="error">Usuário ou senha incorretos!</p>';
+            }else if(isset($_GET['error']) && $_GET['error'] == 2){
+                echo '<p class="error">Preencha todos os campos!</p>';
+                
+            }
+        ?>
         <form action="../security/authentication.php" method="POST">
-
             <label for="email"><p>E-mail</p></label> 
             <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email" >
             <br><br>
@@ -34,7 +41,6 @@
             </div>
         </form>
         <div class="botao">
-            <button id="entrar" class="entrar" type="submit"  onclick="validar()">Entrar</button>
             <a href="/Principal/index.html"><button class="voltar" type="submit">Voltar</button></a>
         </div>      
         <br><br> 
@@ -44,22 +50,6 @@
     </div>
 
     <script>
-        function validar(){
-            var email = formulario.email;
-            var password = formulario.password;
-            if( document.forms[0].email.value=="" 
-                || document.forms[0].email.value.indexOf('@')==-1 
-                || document.forms[0].email.value.indexOf('.')==-1 ) {
-	            alert( "Por favor, informe um e-mail válido!" );
-                email.focus()
-	            return false;
-	        }
-            if(password.value == "") {
-                alert("Senha não informada");
-                password.focus();
-                return;
-            }
-        }
         function myFunction() {
             var x = document.getElementById("passwordClient");
             if (x.type === "password") {

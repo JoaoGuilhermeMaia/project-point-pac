@@ -1,6 +1,6 @@
 <?php 
     include "../db/connection.php";
-
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +22,13 @@
         </div>
         <div class="main_header">
             <div class="popup" onclick="myFunctionPopup()">
-                <p class="myAccount">Acessar <br> <strong>Minha conta</strong></p>
+                <p class="myAccount"><strong>Minha conta</strong></p>
                 <div class="popuptext" id="myPopup">
-                    <a href="../user/login/login.php"><p class="toEnter">Entrar</p></a>
-
+                    <?php
+                        if(!isset($_SESSION['sessionId'])){
+                            echo "<a href='../user/login/login.php'><p class='toEnter'>Entrar</p></a>";
+                        }
+                    ?>
                     <br>
                     <a href=""><p>Meu perfil</p></a>
                     <br>
