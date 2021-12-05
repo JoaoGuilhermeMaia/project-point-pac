@@ -17,24 +17,29 @@
         <br><br>
         <h2>Login</h2>
         <br>
-        <form action="" method="post">
+        <form action="../security/authentication.php" method="POST">
+
             <label for="email"><p>E-mail</p></label> 
             <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email">
             <br><br>
+
             <label for="myInput"><p>Senha</p></label> 
-            <input class="password" type="password" placeholder="Digite sua senha" id="myInput">
+            <input name="password" class="password" type="password" placeholder="Digite sua senha" id="myInput">
+
             <div class="mostrarSenha">
                 <input type="checkbox" onclick="myFunction()"> <p>Mostrar senha</p>
             </div>
+            <br>
+            <div class="botao">
+                <button class="entrar" type="submit">Entrar</button>
+            </div>
         </form>
-        <br><br>
         <div class="botao">
-            <button class="entrar" type="submit">Entrar</button>
-            <a href="/Principal/index.html"><button class="voltar" type="submit">Voltar</button></a>
+            <a href="/Principal/index.html"><button class="voltar">Voltar</button></a>
         </div>      
         <br><br> 
         <div class="cadastro">
-            <a href="/cadastro/cadastro.html"><p>Não tem conta? Cadastre-se</p></a>
+            <a href="../sign_up/cadastro.php"><p>Não tem conta? Cadastre-se</p></a>
         </div>
     </div>
 

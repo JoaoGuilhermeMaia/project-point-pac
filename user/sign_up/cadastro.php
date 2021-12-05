@@ -18,27 +18,29 @@
         <br><br>
         <h2>Cadastro</h2>
         <br>
-        <form action="" method="post">
+        <form action="insUser.php" method="post">
             <label for="name"><p>Nome completo</p></label>
-            <input  id="name" class="name" type="text" placeholder="Digite seu nome" data-val="True" name="name">
+            <input required id="name" class="name" type="text" placeholder="Digite seu nome" data-val="True" name="name">
             <br><br>
             <label for="email"> <p>E-mail</p></label>
-            <input id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email">
+            <input name="email" required id="email" class="email" type="text" placeholder="Digite seu email" data-val="True" name="email">
             <br><br>
             <label for="myInput"><p>Senha</p></label> 
-            <input class="password" type="password" placeholder="Digite sua senha" id="myInput">
+            <input name="password"  required class="password" type="password" placeholder="Digite sua senha" id="myInput">
             <br><br>
             <label for="myInput1"><p>Confirmar senha</p></label> 
-            <input class="password" type="password" placeholder="Confirme sua senha" id="myInput1">
+            <input  class="password" type="password" placeholder="Confirme sua senha" id="myInput1">
             <div class="mostrarSenha">
                 <input type="checkbox" onclick="myFunction()"> <p>Mostrar senha</p>
             </div>
+            <br><br>
+            <div class="botao">
+                <button class="cadastrar" type="submit">Cadastrar</button>
+            </div>   
         </form>
-        <br><br>
         <div class="botao">
-            <button class="cadastrar" type="submit">Cadastrar</button>
-            <a href="/Principal/index.html"><button class="voltar" type="submit">Voltar</button></a>
-        </div>      
+            <a href="../login/login.php"><button class="voltar">Voltar</button></a>
+        </div>
     </div>
 
 
