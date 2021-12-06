@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <img src="/images/Logo_point.png" alt="logo" height="60px">
+        <img src="../../images/Logo_point.png" alt="logo" height="60px">
     </header>
    
     <div class="main">

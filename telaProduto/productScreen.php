@@ -25,7 +25,7 @@
             <div class="popup" onclick="myFunction()">
                 <p class="myAccount">Acessar <br> <strong>Minha conta</strong></p>
                 <div class="popuptext" id="myPopup">
-                    <a href="/login/login.html"><p class="toEnter">Entrar</p></a>
+                    <a href="../user/login/login.php"><p class="toEnter">Entrar</p></a>
                     <a href=""><p class="exit">Sair</p></a>
                 </div>
             </div>
@@ -46,9 +46,8 @@
                   Barra de navegação
                 </div>
                 <ul class="list-items">
-                    <li><a href="/tabelaProdutos/admin.html"><i class="fas fa-user"></i>Administrador</a></li>
-                    <li><a href="login.html"><i class="fas fa-user"></i>Login / Cadastro</a></li>
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i>Carrinho</a></li>
+                    <li><a href="../user//login//login.php"><i class="fas fa-user"></i>Login / Cadastro</a></li>
+                    <li><a href="/Carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i>Carrinho</a></li>
                     <div class="icons">
                         <a href="https://www.linkedin.com/in/matheus-rosa-bruns-111536208/"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.linkedin.com/in/carlos-eduardo-nass-66bba91b4/"><i class="fab fa-linkedin"></i></a>
