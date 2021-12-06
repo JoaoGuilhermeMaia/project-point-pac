@@ -1,8 +1,10 @@
 <?php 
 
-include("../db/connection.php");
+include_once "../db/connection.php";
 
-$consulta = "SELECT * FROM users";
+include '../user/security/validateAdmin.php';
+
+$consulta = "SELECT * FROM users WHERE admin <> 0";
 $con = $db_connection->query($consulta) or die($db_connection->error);
 
 

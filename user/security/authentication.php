@@ -20,8 +20,7 @@
             session_start();
             $_SESSION = $result[0];
             $_SESSION['sessionId'] = session_id();
-            
-            if($_SESSION['permission'] == 0){
+            if($_SESSION['admin'] == 0){
                 header('Location: ../../Principal/index.php');
             }else{
                 header('Location: ../../tablesAdmin/tableProducts.php');    

@@ -24,5 +24,5 @@
     
     $result  = $stm_sql->execute();
 
-    header("Location:../../Principal/index.php");
+    header("Location:../../tablesAdmin/tableProducts.php");
 ?>

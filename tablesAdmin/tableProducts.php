@@ -2,6 +2,8 @@
 
 include("../db/connection.php");
 
+include '../user/security/validateAdmin.php';
+
 $sql = "SELECT * FROM products";
 $con = $db_connection->query($sql) or die($db_connection->error);
 
@@ -63,7 +65,7 @@ $con = $db_connection->query($sql) or die($db_connection->error);
                     <td><?php echo $dado["category_id_category"];?></td>
                     <td>R$ <?php echo $dado["value"];        ?></td>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
-                    <?php echo'<td><a href="delete.php='.$dado['category_id'].'"><i class="fas fa-trash-alt"></i></a></td>';?>
+                    <?php echo'<td><a href="delete.php?id='.$dado['category_id'].'"><i class="fas fa-trash-alt"></i></a></td>';?>
                 </tr>
                 <?php } ?>               
             </tbody>

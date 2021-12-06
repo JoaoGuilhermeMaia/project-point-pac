@@ -2,6 +2,8 @@
 
 include("../db/connection.php");
 
+include '../user/security/validateAdmin.php';
+
 $consulta = "SELECT * FROM categories";
 $con = $db_connection->query($consulta) or die($db_connection->error);
 
@@ -18,8 +20,6 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon"><!--icone favicon-->
     <link rel="stylesheet" href="tables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
-
 </head>
 <body>
     <header>
@@ -31,7 +31,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
             <div class="popuptext" id="myPopup">
                 <a href=""><p>Meu perfil</p></a>
                 <br>
-                <a href=""><p class="exit">Sair</p></a>
+                <a href="../user/logoff/logout.php"><p class="exit">Sair</p></a>
             </div>
         </div>
     </header>
@@ -66,6 +66,9 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
                 <?php } ?>          
             </tbody>
         </table>
+        <small>
+            Para excluir uma categoria, ela não pode ter produtos vinculadas a ela.
+        </small> 
     </div>
 
     <script>
