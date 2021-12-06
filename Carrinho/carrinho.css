@@ -311,6 +311,14 @@ tbody tr td img{
 tbody tr td a{
     text-decoration: none;
 }
+tbody tr td i{
+    cursor: pointer;
+    font-size: 17px;
+    color: rgb(107, 0, 0);
+}
+tbody tr td i:hover{
+    color: rgb(150, 0, 0);
+}
 tbody tr{
     text-align: center;
     overflow-x:auto;
@@ -325,9 +333,11 @@ tbody tr{
     background-color: rgb(245, 245, 245);
 }
 
+
 .checkout{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 .checkout button{
     padding: 15px 20px;
@@ -351,4 +361,87 @@ tbody tr{
 }
 .checkout .checkout_buy button:hover{
     background-color: rgb(233, 105, 0);
+}
+
+
+@media screen and (max-width:540px){  
+    .tableProducts{
+        width: 100%;
+    }
+    .cart h2{
+        font-size: 22px;
+    }
+    table thead{
+        font-size: 10px;
+        padding: 10px;
+    }
+    table thead td{
+        padding: 15px;
+        border-bottom: 1px solid black;
+    }
+    tbody tr td{
+        font-size: 10px;
+    }
+    tbody tr td img{
+        height: 100px;
+        padding: 10px;
+    }
+    tbody tr td input{
+        padding: 1px;
+    }
+    tbody tr td input[type=button]{
+        padding: 1px 4px;
+    }
+    .tableProducts .subtotal p{
+        font-size: 16px;
+    }
+    .checkout{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+    .checkout button{
+        padding: 10px 1px;
+    }
+    
+}
+
+@media screen and (max-width:360px){
+    .cart h2{
+        font-size: 20px;
+    }
+    table thead{
+        font-size: 7px;
+    }
+    table thead td{
+        padding: 15px;
+    }
+    table thead td .qtd{
+        display: none;
+    }
+    tbody tr td{
+        font-size: 10px;
+    }
+    tbody tr td img{
+        height: 80px;
+        padding: 10px;
+    }
+    tbody tr td input{
+        padding: 1px;
+    }
+    tbody tr td input[type=button]{
+        padding: 1px 4px;
+    }
+    .tableProducts .subtotal p{
+        font-size: 12px;
+    }
+    .checkout{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+    .checkout button{
+        padding: 10px 1px;
+    }
+        
 }
