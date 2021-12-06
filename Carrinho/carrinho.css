@@ -264,3 +264,184 @@ header .main_header .cart a i{
         display: none;
     }
 }
+
+
+
+
+.tableProducts{
+    width: 90%;
+    margin: auto;
+    background-color: rgb(209, 209, 209);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.cart h2{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin: 50px 0;
+}
+table{
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 20px 20px 0px 0;
+    
+}
+table thead{
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+table thead td{
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+tbody tr td{
+    text-align:center;
+    height: 25px;
+    border-bottom:1px dotted rgb(163, 163, 163) ;
+}
+tbody tr td img{
+    height: 200px;
+    padding: 20px;
+}
+tbody tr td a{
+    text-decoration: none;
+}
+tbody tr td i{
+    cursor: pointer;
+    font-size: 17px;
+    color: rgb(107, 0, 0);
+}
+tbody tr td i:hover{
+    color: rgb(150, 0, 0);
+}
+tbody tr{
+    text-align: center;
+    overflow-x:auto;
+}
+.tableProducts .subtotal p{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    text-align: right;
+    padding: 5px 20px;
+    background-color: rgb(245, 245, 245);
+}
+
+
+.checkout{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.checkout button{
+    padding: 15px 20px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.checkout .keep_buying button{
+    border: none;
+    color: white;
+    background-color: rgb(100, 100, 100);
+}
+.checkout .keep_buying button:hover{
+    background-color: rgb(136, 136, 136);
+}
+.checkout .checkout_buy button{
+    border: none;
+    color: white;
+    background-color: rgb(255, 115, 0);
+}
+.checkout .checkout_buy button:hover{
+    background-color: rgb(233, 105, 0);
+}
+
+
+@media screen and (max-width:540px){  
+    .tableProducts{
+        width: 100%;
+    }
+    .cart h2{
+        font-size: 22px;
+    }
+    table thead{
+        font-size: 10px;
+        padding: 10px;
+    }
+    table thead td{
+        padding: 15px;
+        border-bottom: 1px solid black;
+    }
+    tbody tr td{
+        font-size: 10px;
+    }
+    tbody tr td img{
+        height: 100px;
+        padding: 10px;
+    }
+    tbody tr td input{
+        padding: 1px;
+    }
+    tbody tr td input[type=button]{
+        padding: 1px 4px;
+    }
+    .tableProducts .subtotal p{
+        font-size: 16px;
+    }
+    .checkout{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+    .checkout button{
+        padding: 10px 1px;
+    }
+    
+}
+
+@media screen and (max-width:360px){
+    .cart h2{
+        font-size: 20px;
+    }
+    table thead{
+        font-size: 7px;
+    }
+    table thead td{
+        padding: 15px;
+    }
+    table thead td .qtd{
+        display: none;
+    }
+    tbody tr td{
+        font-size: 10px;
+    }
+    tbody tr td img{
+        height: 80px;
+        padding: 10px;
+    }
+    tbody tr td input{
+        padding: 1px;
+    }
+    tbody tr td input[type=button]{
+        padding: 1px 4px;
+    }
+    .tableProducts .subtotal p{
+        font-size: 12px;
+    }
+    .checkout{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+    .checkout button{
+        padding: 10px 1px;
+    }
+        
+}

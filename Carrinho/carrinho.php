@@ -1,3 +1,9 @@
+<?php 
+
+    include_once '../db/connection.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -52,6 +58,43 @@
             </nav>
         </div><!--Responsive Navbar-->
     </header>
+
+    <div class="cart">
+        <h2>Carrinho de compras</h2>
+    </div>
+
+    
+    <div class="tableProducts">
+        <table>
+            <thead >
+                <td></td>
+                <td>Produto</td>
+                <td>Preço</td>
+                <td>Remover</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="" alt="Seu produto"></td>
+                    <td>nome do produto </td>
+                    <td>R$ Preço</td>
+                    <td><i class="fas fa-trash"></i></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="subtotal">
+            <p>Subtotal: <strong>R$ 101,00</strong></p>
+        </div>
+    </div>
+
+    <div class="checkout">
+        <div class="keep_buying">
+            <button >Continuar Comprando</button>
+        </div>
+        <div class="checkout_buy">
+            <button>Finalizar compra</button>
+        </div>
+    </div>
+
 
     <script>
         function myFunction() {
