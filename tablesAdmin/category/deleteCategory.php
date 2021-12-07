@@ -1,6 +1,6 @@
 <?php
 
-    include_once "../db/connection.php";
+    include_once "../../db/connection.php";
     $id_category = (int)$_GET['id_category'];
 
 if(isset($id_category)){

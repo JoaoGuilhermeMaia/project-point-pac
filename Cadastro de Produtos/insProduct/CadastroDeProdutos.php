@@ -1,6 +1,15 @@
 <?php
     include "../../db/connection.php";
 
+    $id = $_GET['id'];
+
+    if(isset($id)){
+        $db_connection->exec("SELECT FROM products WHERE category_id = :id");
+
+        header("Location: tableProducts.php");
+        echo "Alterado com sucesso";
+    }
+
 ?>
 
 <!DOCTYPE html>

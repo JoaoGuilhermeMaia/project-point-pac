@@ -1,6 +1,6 @@
 <?php
 
-    include_once "../db/connection.php";
+    include_once "../../db/connection.php";
     $id_user = (int)$_GET['iduser'];
 
 if(isset($id_user)){
