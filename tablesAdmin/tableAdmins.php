@@ -47,7 +47,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
 
     <h2>Administradores</h2>
     <div class="registerNew">
-            <a href=""><p>Cadastrar novo <i class="fas fa-plus-circle"></i></p></a>
+            <a href="../user//sign_up//cadastro.php"><p>Cadastrar novo <i class="fas fa-plus-circle"></i></p></a>
     </div>
     <div class="tableProducts">
         <table>
@@ -64,10 +64,10 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
                     <td><?php echo $dado["iduser"];  ?></td>
                     <td><?php echo $dado["name"];    ?></td>
                     <td><?php echo $dado["email"];   ?></td>
-                    <?php } ?>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
-                    <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
+                    <?php echo'<td><a href="deleteAdmin.php?id='.$dado['iduser'].'"><i class="fas fa-trash-alt"></i></a></td>';?>
                 </tr>
+                <?php } ?>
             </tbody>
         </table>
     </div>
