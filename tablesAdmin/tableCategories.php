@@ -61,7 +61,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
                     <td><?php echo $dado["id_category"];  ?></td>
                     <td><?php echo $dado["name"]; ?></td>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
-                    <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
+                    <?php echo'<td><a href="deleteCategory.php?id_category'.$dado['id_category'].'"><i class="fas fa-trash-alt"></i></a></td>'; ?>
                 </tr>
                 <?php } ?>          
             </tbody>
