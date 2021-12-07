@@ -36,9 +36,6 @@
                             echo "<a href='user/login/login.php'><p class='toEnter'>Entrar</p></a>";
                         }
                     ?>
-                    <br>
-                    <a href=""><p>Meu perfil</p></a>
-                    <br>
                     <a href="user/logoff/logout.php"><p class="exit">Sair</p></a>
                 </div>
             </div>

@@ -29,8 +29,6 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
         <div class="popup" onclick="myFunction()">
             <i class="fas fa-ellipsis-v"></i>
             <div class="popuptext" id="myPopup">
-                <a href=""><p>Meu perfil</p></a>
-                <br>
                 <a href="../user/logoff/logout.php"><p class="exit">Sair</p></a>
             </div>
         </div>

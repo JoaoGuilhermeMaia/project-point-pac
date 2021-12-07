@@ -30,8 +30,6 @@
         <div class="popup" onclick="myFunction()">
             <i class="fas fa-ellipsis-v"></i>
             <div class="popuptext" id="myPopup">
-                <a href=""><p>Meu perfil</p></a>
-                <br>
                 <a href=""><p class="exit">Sair</p></a>
             </div>
         </div>
