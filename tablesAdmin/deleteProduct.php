@@ -1,7 +1,7 @@
 <?php
 
     include_once "../db/connection.php";
-    include "../user/security"
+    include "../user/security";
 
     $id = $_GET['id'];
 

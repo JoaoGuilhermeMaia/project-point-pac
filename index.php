@@ -126,7 +126,7 @@
                 if (count($products) > 0) {
                    foreach ($products as $product) {
                        echo"<div class='bg_produto'>";
-                       echo"<a href='telaProduto/producScreen.php?id=".$product['category_id'] ."'>";
+                       echo"<a href='telaProduto/productScreen.php?id=".$product['category_id'] ."'>";
                        echo"<div class='imagem'> <img src='Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
                        echo"<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
                        echo"<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";

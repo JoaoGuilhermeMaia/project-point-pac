@@ -2,6 +2,8 @@
 
     include_once("../db/connection.php");
 
+    $id = $_GET['id'];
+
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +64,7 @@
 
     <div class="main_productScreen">
         <?php      
-        $sql = "SELECT * FROM products WHERE category_id=['$id']";
+        $sql = "SELECT * FROM products WHERE category_id=$id";
         $stm_sql = $db_connection->prepare($sql);
         $stm_sql->execute();
         $products = $stm_sql->fetchAll(PDO::FETCH_ASSOC);

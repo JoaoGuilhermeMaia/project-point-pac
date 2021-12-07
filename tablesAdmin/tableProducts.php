@@ -1,8 +1,8 @@
 <?php 
 
-include("../db/connection.php");
+include_once "../db/connection.php";
 
-include '../user/security/validateAdmin.php';
+include_once '../user/security/validateAdmin.php';
 
 $sql = "SELECT * FROM products";
 $con = $db_connection->query($sql) or die($db_connection->error);
@@ -31,7 +31,7 @@ $con = $db_connection->query($sql) or die($db_connection->error);
             <div class="popuptext" id="myPopup">
                 <a href=""><p>Meu perfil</p></a>
                 <br>
-                <a href=""><p class="exit">Sair</p></a>
+                <a href="../user/logoff/logout.php"><p class="exit">Sair</p></a>
             </div>
         </div>
     </header>
