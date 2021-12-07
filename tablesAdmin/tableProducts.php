@@ -37,7 +37,7 @@ $con = $db_connection->query($sql) or die($db_connection->error);
     </header>
 
     <div id="menu" class="menu">
-        <a href="../Principal/index.php"><p>Tela principal</p></a>
+        <a href="../index.php"><p>Tela principal</p></a>
         <a href="tableCategories.php"><p>Categorias</p></a>
         <a href="tableAdmins.php"><p>Admins</p></a>
     </div>
@@ -58,14 +58,14 @@ $con = $db_connection->query($sql) or die($db_connection->error);
             </thead>
             <tbody>
             <?php 
-                while($dado = $con->fetch(PDO::FETCH_ASSOC)){?>
+                while ($dado = $con->fetch(PDO::FETCH_ASSOC)) { ?>
                 <tr>
                     <td><?php echo $dado["category_id"];  ?></td>
                     <td><?php echo $dado["name"];         ?></td>
                     <td><?php echo $dado["category_id_category"];?></td>
                     <td>R$ <?php echo $dado["value"];        ?></td>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
-                    <?php echo'<td><a href="delete.php?id='.$dado['category_id'].'"><i class="fas fa-trash-alt"></i></a></td>';?>
+                    <?php echo'<td><a href="deleteProducts.php?id='.$dado['category_id'].'"><i class="fas fa-trash-alt"></i></a></td>';?>
                 </tr>
                 <?php } ?>               
             </tbody>

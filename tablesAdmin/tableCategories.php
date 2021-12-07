@@ -37,7 +37,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
     </header>
 
     <div id="menu" class="menu">
-        <a href="../Principal/index.php"><p>Tela principal</p></a>
+        <a href="../index.php"><p>Tela principal</p></a>
         <a href="tableProducts.php"><p>Produtos</p></a>
         <a href="tableAdmins.php"><p>Admins</p></a>
     </div>

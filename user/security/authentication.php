@@ -21,7 +21,7 @@
             $_SESSION = $result[0];
             $_SESSION['sessionId'] = session_id();
             if($_SESSION['admin'] == 0){
-                header('Location: ../../Principal/index.php');
+                header('Location: ../index.php');
             }else{
                 header('Location: ../../tablesAdmin/tableProducts.php');    
             }

@@ -1,5 +1,5 @@
 <?php 
-    include "../db/connection.php";
+    include "db/connection.php";
     session_start();
 ?>
 
@@ -10,15 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Point</title>
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon"><!--icone favicon-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsivo.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"><!--icone favicon-->
+    <link rel="stylesheet" href="Principal/style.css">
+    <link rel="stylesheet" href="Principal/responsivo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../images/Logo_point.png" alt="Logo">
+            <img src="images/Logo_point.png" alt="Logo">
         </div>
         <div class="main_header">
 
@@ -33,13 +33,13 @@
                 <div class="popuptext" id="myPopup">
                     <?php
                         if(!isset($_SESSION['sessionId'])){
-                            echo "<a href='../user/login/login.php'><p class='toEnter'>Entrar</p></a>";
+                            echo "<a href='user/login/login.php'><p class='toEnter'>Entrar</p></a>";
                         }
                     ?>
                     <br>
                     <a href=""><p>Meu perfil</p></a>
                     <br>
-                    <a href="../user/logoff/logout.php"><p class="exit">Sair</p></a>
+                    <a href="user/logoff/logout.php"><p class="exit">Sair</p></a>
                 </div>
             </div>
             <div class="cart">
@@ -77,16 +77,16 @@
         <!--Slider banners-->
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="../images/Banner1.jpg" style="width:100%">
+                <img src="images/Banner1.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="../images/Banner2.jpg" style="width:100%">
+                <img src="images/Banner2.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="../images/Banner3.jpg" style="width:100%">
+                <img src="images/Banner3.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="../images/Banner4.jpg" style="width:100%">
+                <img src="images/Banner4.jpg" style="width:100%">
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -108,7 +108,7 @@
 
                 if(count($categories) > 0){
                     foreach($categories as $category){          
-                        echo "<button class='filtrar' ><img src='../Cadastro de categoria/image/image".$category['image']."' alt='' height='95px'>
+                        echo "<button class='filtrar' ><img src='Cadastro de categoria/image/image".$category['image']."' alt='' height='95px'>
                         <p>".$category['name'] ."</p>
                         </button>";
                 }
@@ -126,8 +126,8 @@
                 if (count($products) > 0) {
                    foreach ($products as $product) {
                        echo"<div class='bg_produto'>";
-                       echo"<a href=''>";
-                       echo"<div class='imagem'> <img src='../Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
+                       echo"<a href='telaProduto/producScreen.php?id=".$product['category_id'] ."'>";
+                       echo"<div class='imagem'> <img src='Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
                        echo"<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
                        echo"<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";
                        echo"</a>";
@@ -135,7 +135,7 @@
                                 <button>
                                     <h2>Adicionar</h2>
                                     <div class='imagem_cart'>
-                                        <img src='../images/img_carrinho.png' alt='' height='30px'>
+                                        <img src='images/img_carrinho.png' alt='' height='30px'>
                                     </div>
                                 </button>
                             </div>";

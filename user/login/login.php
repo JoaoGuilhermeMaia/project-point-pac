@@ -41,7 +41,7 @@
             </div>
         </form>
         <div class="botao">
-            <a href="../../Principal/index.php"><button class="voltar" type="submit">Voltar</button></a>
+            <a href="../../index.php"><button class="voltar" type="submit">Voltar</button></a>
         </div>      
         <br><br> 
         <div class="cadastro">
