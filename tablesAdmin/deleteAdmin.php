@@ -1,12 +1,12 @@
 <?php
 
     include_once "../db/connection.php";
+    $id_user = (int)$_GET['iduser'];
 
-if(isset($_GET['id'])){
-    $category_id = (int)$_GET['id'];
-    $db_connection->exec("DELETE FROM products WHERE category_id = $category_id"); 
+if(isset($id_user)){
+    $db_connection->exec("DELETE FROM products WHERE iduser = $id_user"); 
 
-    header("Location: tableProducts.php");
+    header("Location: tableAdmin.php");
     echo "Deletado com sucesso";
 }
 

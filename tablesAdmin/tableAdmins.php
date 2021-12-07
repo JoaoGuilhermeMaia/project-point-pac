@@ -40,7 +40,6 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
     </header>
 
     <div id="menu" class="menu">
-        <a href="../Principal/index.php"><p>Tela principal</p></a>
         <a href="tableCategories.php"><p>Categorias</p></a>
         <a href="tableProducts.php"><p>Produtos</p></a>
     </div>
@@ -65,7 +64,7 @@ $con = $db_connection->query($consulta) or die($db_connection->error);
                     <td><?php echo $dado["name"];    ?></td>
                     <td><?php echo $dado["email"];   ?></td>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>
-                    <?php echo'<td><a href="deleteAdmin.php?id='.$dado['iduser'].'"><i class="fas fa-trash-alt"></i></a></td>';?>
+                    <?php echo'<td><a href="deleteAdmin.php?iduser='.$dado['iduser'].'"><i class="fas fa-trash-alt"></i></a></td>';?>
                 </tr>
                 <?php } ?>
             </tbody>
