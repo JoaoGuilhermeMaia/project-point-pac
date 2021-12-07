@@ -1,13 +1,10 @@
-<?php
-    include "../../db/connection.php";
+<?php 
+    include_once "../../db/connection.php";
 
     $id = $_GET['id'];
 
     if(isset($id)){
-        $db_connection->exec("SELECT FROM products WHERE category_id = :id");
-
-        header("Location: tableProducts.php");
-        echo "Alterado com sucesso";
+        $product = $db_connection->exec("SELECT * FROM products WHERE category_id = $id");
     }
 
 ?>
@@ -18,9 +15,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Produtos</title>
-    <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon"><!--icone favicon-->
-    <link rel="stylesheet" href="cadastroProduto.css">
+    <title>Edição de Produto</title>
+    <link rel="shortcut icon" href="../../images//favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../Cadastro de Produtos/insProduct/cadastroProduto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
 </head>
@@ -49,8 +46,7 @@
                 <div class="input_product">
                     <div class="name_product">
                         <label for="nome"><strong><h2 style="text-align: center;">Produto</h2></strong></label>
-                        
-                        <input type="text" name="name" id="nome" required placeholder="Nome:">
+                        <input type="text" name="name" id="nome" required placeholder="Nome:" value="<?php echo $product['name']?>">
                     </div>
                     <br>
                     <div>
@@ -74,13 +70,13 @@
                     <div class="description_product">
                         <label for="descricao"><strong>Descrição:</strong></label>
                         <br>
-                        <textarea rows="2" id="descricao" name="desc"></textarea>
+                        <textarea rows="2" id="descricao" name="desc" value="<?php echo $product['description'];?>"></textarea>
                     </div>
                     <br>
                     <div class="value_product">
                         <label for="valor"><strong>Valor do Produto:</strong></label>
                         <br>
-                        <input type="number" name="value-product" id="valor" required placeholder="R$ " min="0" value="0" step=".01">
+                        <input value="<?php echo $product['value'];?>" type="number" name="value-product" id="valor" required placeholder="R$ " min="0" value="0" step=".01">
                     </div>
                 </div>           
                 
