@@ -64,8 +64,8 @@ $con = $db_connection->query($sql) or die($db_connection->error);
                     <td><?php echo $dado["name"];         ?></td>
                     <td><?php echo $dado["category_id_category"];?></td>
                     <td>R$ <?php echo $dado["value"];        ?></td>
-                    <?php echo'<td><a href="../Cadastro de Produtos/insProduct/CadastroDeProdutos.php?id='.$dado['category_id'];'"><i class="fas fa-edit"></i></a></td>'; ?>
-                    <?php echo'<td><a href="product/deleteProducts.php?id='.$dado['category_id'].'"><i class="fas fa-trash-alt"></i></a></td>';?>
+                    <?php echo'<td><a href="product/editProduct.php"><i class="fas fa-edit"></i></a></td>'; ?>
+                    <?php echo'<td><a href="product/deleteProduct.php?id='.$dado['category_id'].'"><i class="fas fa-trash-alt"></i></a></td>';?>
                 </tr>
                 <?php } ?>               
             </tbody>
