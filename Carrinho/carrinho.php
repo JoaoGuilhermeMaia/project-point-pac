@@ -1,6 +1,7 @@
 <?php 
 
-    include_once '../db/connection.php';
+    include_once ('../db/connection.php');
+
 
 ?>
 
@@ -66,32 +67,65 @@
         <h2>Carrinho de compras</h2>
     </div>
 
+    <?php
+
+    if(!isset($_SESSION['itens'])){
+        $_SESSION['itens'] = array();
+    }
+
+    if(isset($_GET['add']) && $_GET['add'] == "carrinho"){
+        /*Adiciona ao carrinho*/
+        $idProduto = $_GET['category_id'];
+        if (!isset($_SESSION['itens'][$idProduto])){
+            $_SESSION['itens'][$idProduto] = 1;            
+        }else{
+            $_SESSION['itens'] [$idProduto] += 1;
+        }
+    }
+    if (count($_SESSION['itens']) == 0){
+        echo'Carrinho Vazio <br><a href"../index.php">Adicionar itens</a>';
+    }else{
+        
+        $sql = "SELECT * FROM products";
+        $stm_sql = $db_connection->prepare($sql);
+        $stm_sql->execute();
+        $products = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
+
+
+    }
     
-    <div class="tableProducts">
-        <table>
-            <thead >
-                <td></td>
-                <td>Produto</td>
-                <td>Preço</td>
-                <td>Remover</td>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><img src="" alt="Seu produto"></td>
-                    <td>nome do produto </td>
-                    <td>R$ Preço</td>
-                    <td><i class="fas fa-trash"></i></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="subtotal">
+
+    echo'<div class="tableProducts">';
+        echo'<table>';
+            echo'<thead>
+                    <td></td>
+                    <td>Produto</td>
+                    <td>Preço</td>
+                    <td>Remover</td>
+                </thead>';
+            echo'<tbody>';
+                echo'<tr>';
+                    echo'<td><img src="" alt="Seu produto"></td>';
+                    echo'<td>nome do produto </td>';
+                    echo'<td>R$ Preço</td>';
+                    echo'<td><i class="fas fa-trash"></i></td>';
+                echo'</tr>';
+            echo'</tbody>';
+        echo'</table>';
+        echo'<div class="subtotal">
             <p>Subtotal: <strong>R$ 101,00</strong></p>
-        </div>
-    </div>
+        </div>';
+    echo'</div>';
+
+
+
+
+    ?>
+    
 
     <div class="checkout">
         <div class="keep_buying">
-            <button >Continuar Comprando</button>
+            <a href="../index.php"><button >Continuar Comprando</button></a>
         </div>
         <div class="checkout_buy">
             <button>Finalizar compra</button>

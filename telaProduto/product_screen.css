@@ -316,7 +316,7 @@ header .main_header .cart a i{
     bottom: 0;
     color: white;
     border: 1px solid rgba(0, 0, 0, 0.486);
-    background-color: rgba(0, 0, 0, 0.884);
+    background-color: rgba(0, 0, 0, 0.925);
     letter-spacing: 1px;
     cursor: pointer;
 }
@@ -337,12 +337,12 @@ header .main_header .cart a i{
     bottom: 0;
     color: white;
     border: 1px solid rgba(0, 0, 0, 0.486);
-    background-color: rgba(0, 0, 0, 0.884);
+    background-color: rgba(0, 0, 0, 0.952);
     letter-spacing: 1px;
     cursor: pointer;
 }
 .addToCart2 button:hover{
-    background-color: rgb(54, 54, 54);
+    background-color: rgb(31, 31, 31);
     transition: 0.2s;
 }
 @media screen and (max-width:846px){
