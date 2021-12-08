@@ -19,7 +19,10 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../images/Logo_point.png" alt="Logo">
+            <a href="../index.php">
+                <img src="../images/Logo_point.png" alt="Logo">
+            </a>
+
         </div>
         <div class="main_header">
             <div class="popup" onclick="myFunction()">

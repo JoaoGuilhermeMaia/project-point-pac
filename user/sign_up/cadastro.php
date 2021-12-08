@@ -10,7 +10,9 @@
 <body>
 
     <header>
-        <img src="../../images/Logo_point.png" alt="logo" height="60px">
+        <a href="../../index.php">   
+            <img src="../../images/Logo_point.png" alt="logo" height="60px">
+        </a>
     </header>
    
     <div class="main">
@@ -19,7 +21,7 @@
         <h2>Cadastro</h2>
         <br>
         <form action="insUser.php" method="post">
-            <label for="name"><p>Nome completo</p></label>
+            <label for="name"><p>Nome</p></label>
             <input required id="name" class="name" type="text" placeholder="Digite seu nome" data-val="True" name="name">
             <br><br>
             <label for="email"> <p>E-mail</p></label>
