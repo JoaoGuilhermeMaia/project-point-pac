@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produto</title>
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon"> <!--icone favicon-->
-    <link rel="stylesheet" href="productScreen.css">
+    <link rel="stylesheet" href="product_screen.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
 </head>
@@ -50,6 +50,7 @@
                 <ul class="list-items">
                     <li><a href="../user//login//login.php"><i class="fas fa-user"></i>Login / Cadastro</a></li>
                     <li><a href="/Carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i>Carrinho</a></li>
+                    <li><a href="/Carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i>Sair</a></li>
                     <div class="icons">
                         <a href="https://www.linkedin.com/in/matheus-rosa-bruns-111536208/"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.linkedin.com/in/carlos-eduardo-nass-66bba91b4/"><i class="fab fa-linkedin"></i></a>
@@ -85,7 +86,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>';
-                echo'<div class="productPrice"> <h2>R$' .$product["value"].'</h2> </div>';
+                echo'<div class="productPrice"> <h2>R$ '.$product["value"].'</h2> </div>';
                 echo'<div class="addToCart">
                         <button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i> </button>
                     </div>';
@@ -94,7 +95,7 @@
             }
         }
         ?>
-    </div>
+    </div> 
     <div class="addToCart2">
         <button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i> </button>
     </div>

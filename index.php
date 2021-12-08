@@ -57,7 +57,12 @@
                 </div>
                 <ul class="list-items">
                     <li><a href="/tabelaProdutos/admin.html"><i class="fas fa-user"></i>Administrador</a></li>
-                    <li><a href="login.html"><i class="fas fa-user"></i>Login / Cadastro</a></li>
+                    <?php
+                        if(!isset($_SESSION['sessionId'])){
+                            echo "
+                            <li><a href='user/login/login.php'><i class='fas fa-user'></i>Entrar</a></li>";
+                        }
+                    ?>
                     <li><a href="#"><i class="fas fa-shopping-cart"></i>Carrinho</a></li>
                     <div class="icons">
                         <a href="https://www.linkedin.com/in/matheus-rosa-bruns-111536208/"><i class="fab fa-linkedin"></i></a>
