@@ -60,8 +60,10 @@
             </nav>
         </div><!--Responsive Navbar-->
     </header>
-
-
+    
+    <div class="comeBack">
+        <a href="../index.php"><i class="fas fa-chevron-left"></i> Voltar</a>
+    </div>
     <div class="main_productScreen">
         <?php      
         $sql = "SELECT * FROM products WHERE category_id=$id";
@@ -87,34 +89,15 @@
                 echo'<div class="addToCart">
                         <button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i> </button>
                     </div>';
-                echo'<div class="productDescription"> <p>'.$product["description"].'</p> </div>';
             echo'</div>';
+            echo'<div class="productDescription"> <p>'.$product["description"].'</p> </div>';
             }
         }
         ?>
     </div>
-
-
-    <footer>
-        <div class="mainFooter">
-            <div class="social">
-                <h2>Siga-nos</h2>
-                <a href="#"><i class="fab fa-instagram" id="insta"></i></a>
-                <a href="#"><i class="fab fa-facebook-square" id="face"></i></a>
-            </div>
-            <div class="location">
-                <h2>Localização: </h2>
-                <p>Estamos localizados na Rua Senador Felipe Schmidt, 308 - Centro <br>Joinville - SC</p>
-            </div>
-            <div class="team">
-                <h2>Time: </h2>
-                <p>Matheus Bruns</p>
-                <p>Carlos Nass</p>
-                <p>João Maia</p>
-                <p>Matheus Bittencourt</p>
-            </div>
-        </div>
-    </footer>
+    <div class="addToCart2">
+        <button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i> </button>
+    </div>
 
     <script>
         function myFunction() {

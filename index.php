@@ -111,7 +111,7 @@
                 }
             }
            ?>
-        </div><!--botão filtrar bebidas-->
+        </div>
 
         <div class="produtos">
             <?php
