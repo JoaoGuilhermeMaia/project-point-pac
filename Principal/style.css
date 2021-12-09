@@ -303,13 +303,13 @@ to {opacity: 1}
 .add_carrinho:hover{
     border: 1px solid #ffffff;
 }
-.add_carrinho h2{
+.add_carrinho a h2{
     color: white;
     font-size: 27px;
     position: relative;
     top: 5px;
 }
-.add_carrinho .imagem_cart{
+.add_carrinho a .imagem_cart{
     margin-top: 10px;
     margin-left: 15px;
     
@@ -422,29 +422,23 @@ footer{
     margin-top: 50px;
     border-top: 2px solid rgb(255, 102, 0);
 }
-
 footer .social a{
     text-decoration: none;   
 }
-
 footer .social a i{
     font-size: 40px;
     margin-top: 15px;
     margin: 5px;
-        
 }
 footer .social h2{
     margin-left: 5px;
-        
 }
-
 footer .social a #face{
     color: rgb(60, 60, 253);
 }
 footer .social a #insta{
     color: rgb(199, 0, 133);
 }
-
 footer p{
     color: white;
     margin: 5px ;
@@ -472,7 +466,6 @@ footer .location p{
     margin-top: 10px;
     text-align:center;
 }
-
 
 @media screen and (max-width: 700px) {
     footer p{

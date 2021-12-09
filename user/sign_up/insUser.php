@@ -13,7 +13,7 @@
 
         $stm_sql = $db_connection->prepare($sql); 
         $stm_sql->bindParam(':email', $email);
-        $isValid = $stm_sql->execute();
+        $isValid = $stm_sql->fetchAll();
         
         if($isValid == false){
             $sql = "INSERT INTO users (name, email, password, admin) VALUES (:name, :email, :password, :admin)";

@@ -42,9 +42,11 @@
                     <?php
                         if(!isset($_SESSION['sessionId'])){
                             echo "<a href='user/login/login.php'><p class='toEnter'>Entrar</p></a>";
+                        }else{
+                            echo"<a href='user/logoff/logout.php'><p class='exit'>Sair</p></a>";
                         }
                     ?>
-                    <a href="user/logoff/logout.php"><p class="exit">Sair</p></a>
+                    
                 </div>
             </div>
             <div class="cart">
@@ -155,14 +157,16 @@
                        echo"<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
                        echo"<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";
                        echo"</a>";
-                       echo"<div class='add_carrinho'>
-                                <button>
-                                    <h2>Adicionar</h2>
-                                    <div class='imagem_cart'>
-                                        <img src='images/img_carrinho.png' alt='' height='30px'>
-                                    </div>
-                                </button>
-                            </div>";
+                       echo"<div class='add_carrinho'>";
+                        echo"<a href='Carrinho/insCarrinho.php?idProduct=".$product['category_id'] . '&idCategory='.$product['category_id_category']."'>
+                            <button name'addToCart'>
+                            <h2>Adicionar</h2>
+                            <div class='imagem_cart'>
+                            <img src='images/img_carrinho.png' alt='' height='30px'>
+                            </div>
+                            </button>
+                            </a>";
+                            echo"</div>";
                         echo"</div>";   
                    }
                 }
@@ -181,14 +185,16 @@
                         echo"<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
                         echo"<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";
                         echo"</a>";
-                        echo"<div class='add_carrinho'>
-                                 <button>
-                                     <h2>Adicionar</h2>
-                                     <div class='imagem_cart'>
-                                         <img src='images/img_carrinho.png' alt='' height='30px'>
-                                     </div>
-                                 </button>
-                             </div>";
+                        echo"<div class='add_carrinho'>";
+                        echo"<a href='Carrinho/insCarrinho.php?idProduct=".$product['category_id'] . '&idCategory='.$product['category_id_category']."'>
+                            <button name'addToCart'>
+                            <h2>Adicionar</h2>
+                            <div class='imagem_cart'>
+                            <img src='images/img_carrinho.png' alt='' height='30px'>
+                            </div>
+                            </button>
+                            </a>";
+                            echo"</div>";
                          echo"</div>";   
                     }
                  }

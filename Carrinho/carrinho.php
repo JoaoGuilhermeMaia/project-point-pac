@@ -68,7 +68,7 @@
                     ?>
                     <?php
                         if(isset($_SESSION['sessionId'])){
-                            echo "<li><a href='user/logoff/logout.php'><p class='exit'>Sair</p></a></li>";
+                            echo "<li><a href='../user/logoff/logout.php'><p class='exit'>Sair</p></a></li>";
                         }
                     ?>
                     <div class="icons">

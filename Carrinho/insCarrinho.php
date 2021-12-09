@@ -27,5 +27,6 @@
     }else{
         header ("Location: ../telaProduto/productScreen.php?id=" . $id_product);
     }
+    
 
 ?>

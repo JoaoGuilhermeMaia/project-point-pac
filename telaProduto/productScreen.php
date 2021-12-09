@@ -30,10 +30,15 @@
                 <div class="popuptext" id="myPopup">
                     <?php
                         if(!isset($_SESSION['sessionId'])){
-                            echo "<a href='user/login/login.php'><p class='toEnter'>Entrar</p></a>";
+                            echo "<a href='../user/login/login.php'><p class='toEnter'>Entrar</p></a>";
                         }
                     ?>
-                    <a href="user/logoff/logout.php"><p class="exit">Sair</p></a>
+                    <?php
+                        if(isset($_SESSION['sessionId'])){
+                            echo "<a href='user/logoff/logout.php'><p class='exit'>Sair</p></a>'";
+                        }
+                    ?>
+                    
                 </div>
             </div>
             <div class="cart">
