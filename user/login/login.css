@@ -36,12 +36,19 @@ body{
     
 }
 .main h2{
-    color: rgb(255, 255, 255);
+    color: rgb(151, 145, 145);
     text-align: center;
     font-size: 30px;
     margin-bottom: 15px;
 }
-.main p{
+.main p {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.main label p{
     color: rgb(255, 106, 0);
     text-align: center;
     font-weight: bold;
@@ -132,17 +139,14 @@ body{
     .main{
         width: 350px;
     }
-    .main h2{
-        color: rgb(151, 145, 145);
+    .cadastro a p{
+        font-size: 17px;
     }
 }
 @media screen and (max-width:370px){
     .main{
         width: 300px;
         padding: 20px;
-    }
-    .main h2{
-        color: rgb(151, 145, 145);
     }
 }
 /* Responsivo */

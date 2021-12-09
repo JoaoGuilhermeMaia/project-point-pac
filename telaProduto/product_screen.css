@@ -247,20 +247,28 @@ header .main_header .cart a i{
 .list-items .icons a:first-child{
     margin-left: 0px;
 }
-
+.comeBack{
+    margin: 10px auto;
+    padding: 10px;
+    width: 90%;
+}
+.comeBack a{
+    color: rgb(1, 0, 88);
+    font-weight: bold;
+    text-decoration: none;
+}
 .main_productScreen{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: rgb(241, 241, 241);
-    margin:50px auto;
+    margin:10px auto;
     width: 90%;
     border: 1px solid rgba(0, 0, 0, 0.527);
     border-radius: 15px;
 }
-
 .productImage{
-    width: 300px;
+    width: 50%;
     text-align: center;
     padding: 50px;
     border-radius: 20px 0 0 20px;
@@ -270,7 +278,11 @@ header .main_header .cart a i{
 }
 .right_product{
     margin: 0 auto;
-    width: 60%;
+}
+
+.right_product .productName h2{
+    color: rgb(26, 26, 26);
+    font-size: 25px;
 }
 .right_product h2{
     font-weight: bold;
@@ -279,7 +291,7 @@ header .main_header .cart a i{
 .right_product .stars{
     font-size: 20px;
     letter-spacing: 5px;
-    color: rgb(255, 94, 0);
+    color: rgb(255, 102, 0);
     padding: 10px;
     cursor:default;
 }
@@ -288,80 +300,107 @@ header .main_header .cart a i{
     color: rgb(255, 139, 61);
 }
 .right_product .productPrice{
-    color: rgb(0, 0, 0);
+    color: rgb(18, 49, 0);
 }
-.right_product .addToCart{
-    padding: 20px 10px;
+.productDescription{
+    padding: 20px;
+    text-align: justify;
+    color: rgba(24, 24, 24, 0.918);
 }
-.right_product .addToCart button{
-    padding: 10px 30px;
+
+.addToCart button{
+    width: 250px;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 15px;
+    bottom: 0;
     color: white;
     border: 1px solid rgba(0, 0, 0, 0.486);
-    background-color: rgb(53, 53, 53);
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.925);
     letter-spacing: 1px;
     cursor: pointer;
 }
-.right_product .addToCart button:hover{
-    background-color: rgb(124, 124, 124);
-    transform: scale(1.02);
+.addToCart button:hover{
+    background-color: rgb(54, 54, 54);
     transition: 0.2s;
 }
-.right_product .productDescription{
-    padding: 20px 10px;
-    text-align: justify;
-    color: rgba(255, 102, 0, 0.918);
+.addToCart2{
+    height: 50px;
+    display: none;
 }
-
+.addToCart2 button{
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    z-index: 100;
+    position:fixed;
+    bottom: 0;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    background-color: rgba(0, 0, 0, 0.952);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.addToCart2 button:hover{
+    background-color: rgb(31, 31, 31);
+    transition: 0.2s;
+}
 @media screen and (max-width:846px){
+    .main_productScreen{
+        width: 95%;
+    }
     .productImage{
-        width: 150px;
         padding: 50px 0;
     }
     .productImage img{
-        height: 200px;
+        height: 300px;
     }
     .right_product .productName{
         font-size: 15px;
+        text-align: center;        
     }
-    .right_product .productDescription{
-        font-size: 10px;
+    .stars, .productPrice, .addToCart{
+        text-align: center;
+    }
+    .productDescription{
+        font-size: 17px;
+    }
+    .addToCart{
+        width: 100%;
     }
 }
 @media screen and (max-width:580px){
+    .right_product{
+        padding: 0 50px;
+    }
     .productImage{
-        width: 100px;
-        padding: 50px 0;
+        padding: 20px 0 0 0;
     }
     .productImage img{
-        height: 150px;
+        height: 250px;
     }
     .right_product .productName{
-        font-size: 11px;
-    }
-    .right_product .productDescription{
-        font-size: 10px;
+        font-size: 14px;
+        text-align: center;
     }
     .right_product .stars{
         font-size: 15px;
         padding: 0 10px;
     }
     .right_product .productPrice h2{
+        font-size: 25px;
+        margin-top: 20px;
+        padding: 20px 0px;
+    }
+    .productDescription p{
+        padding: 0 20px;
         font-size: 15px;
-        padding: 20px 10px;
-        
     }
-    .right_product .addToCart{
-        padding: 0px;
+    .addToCart{
+        display:none;
     }
-    .right_product .addToCart button{
-        padding: 5px 10px;
-        font-size: 15px;
-        letter-spacing: 1px;
-        cursor: pointer;
-    }
-    .right_product .productDescription p{
-        font-size: 1px;
+    .addToCart2{
+        display: block;
     }
 }
 @media screen and (max-width: 480px){
@@ -381,114 +420,3 @@ header .main_header .cart a i{
         display: none;
     }
 }
-
-/*Rodapé*/
-footer{
-    width: 100%;
-    background-color: rgb(56, 56, 56);
-    padding: 0 0 30px 0;
-    cursor: default;
-}
-.mainFooter{
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-    border-top: 2px solid rgb(255, 102, 0);
-}
-footer .social a{
-    text-decoration: none;   
-}
-
-footer .social a i{
-    font-size: 40px;
-    margin-top: 15px;
-    margin: 5px;
-}
-footer .social h2{
-    margin-left: 5px;
-}
-footer .social a #face{
-    color: rgb(60, 60, 253);
-}
-footer .social a #insta{
-    color: rgb(199, 0, 133);
-}
-footer p{
-    color: white;
-    margin: 5px ;
-    transition: 0.2s;
-}
-footer .team p:hover{
-    color: rgb(255, 136, 0);
-}
-footer h2{
-    margin-top: 10px;
-    color: rgb(199, 199, 199);
-}
-footer .social{
-    width: 25%;
-    text-align: center;
-
-}
-footer .team{
-    width: 25%;
-}
-footer .location{
-    width: 50%;
-    text-align: center;
-}
-footer .location p{
-    margin-top: 10px;
-    text-align:left;
-}
-
-@media screen and (max-width: 700px) {
-    footer p{
-        font-size: 15px
-    }
-    footer h2{
-        font-size: 17px;
-    }
-    footer .social a i{
-        font-size: 30px;
-    }
-}
-@media screen and (max-width: 615px) {
-    footer p{
-        font-size: 12px
-    }
-    footer h2{
-        font-size: 15px;
-    }
-    footer .social a i{
-        font-size: 30px;
-    }
-}
-
-@media screen and (max-width: 515px) {
-    footer p{
-        font-size: 10px
-    }
-    footer .social a i{
-        font-size: 25px;
-    }
-}
-@media screen and (max-width: 450px) {
-    footer p{
-        font-size: 10px
-    }
-    footer .social a i{
-        font-size: 20px;
-    }
-}
-@media screen and (max-width: 320px) {
-    footer p{
-        font-size: 10px
-    }
-    footer .social a i{
-        font-size: 15px;
-        
-    }
-}
-/*Rodapé*/

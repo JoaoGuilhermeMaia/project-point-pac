@@ -10,7 +10,9 @@
 </head>
 <body>
     <header>
-        <img src="../../images/Logo_point.png" alt="logo" height="60px">
+        <a href="../../index.php">
+            <img src="../../images/Logo_point.png" alt="logo" height="60px">
+        </a>
     </header>
    
     <div class="main">
