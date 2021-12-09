@@ -22,7 +22,9 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images/Logo_point.png" alt="Logo">
+            <a href="index.php">
+                <img src="images/Logo_point.png" alt="Logo">
+            </a>
         </div>
         <div class="main_header">
 
@@ -221,7 +223,7 @@
                     <div class="flip-box-inner">
                         <div class="flip-box-front">
                             <h2></h2>
-                            <img src="https://www.revistabula.com/wp/wp-content/uploads/2021/04/vinho-610x350.jpg" alt="" height="173px" width="100%">
+                            <img src="https://st.depositphotos.com/1011976/3541/i/600/depositphotos_35411925-stock-photo-wine-with-barrel-and-hay.jpg" alt="" height="173px" width="100%">
                             
                         </div>
                         <div class="flip-box-back">
