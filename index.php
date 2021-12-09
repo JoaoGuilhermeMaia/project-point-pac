@@ -125,21 +125,22 @@
 
                 if(count($categories) > 0){
                     foreach($categories as $category){          
-                        echo "<button class='filtrar' ><img src='Cadastro de categoria/image/image".$category['image']."' alt='' height='95px'>
+                        echo "<a href='index.php?idcategory=".$category['id_category']."'><button class='filtrar' ><img src='Cadastro de categoria/image/image".$category['image']."' alt='' height='95px'>
                         <p>".$category['name'] ."</p>
-                        </button>";
+                        </button></a>";
+                    }
                 }
-            }
            ?>
         </div>
 
         <div class="produtos">
             <?php
+            if(!isset($_GET['idcategory'])){
                 $sql = "SELECT * FROM products";
                 $stm_sql = $db_connection->prepare($sql);
                 $stm_sql->execute();
                 $products = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
-
+                
                 if (count($products) > 0) {
                    foreach ($products as $product) {
                        echo"<div class='bg_produto'>";
@@ -159,18 +160,44 @@
                         echo"</div>";   
                    }
                 }
+            }else{
+                $id_category = $_GET['idcategory'];
+                $sql = "SELECT * FROM products WHERE category_id_category = :id_category";
+                $stm_sql = $db_connection->prepare($sql);
+                $stm_sql->bindParam('id_category',$id_category);
+                $stm_sql->execute();
+                $products = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
+                if (count($products) > 0) {
+                    foreach ($products as $product) {
+                        echo"<div class='bg_produto'>";
+                        echo"<a href='telaProduto/productScreen.php?id=".$product['category_id'] ."'>";
+                        echo"<div class='imagem'> <img src='Cadastro de Produtos/imagem/image".$product['image']."' alt='".$product['name']."'> </div>";
+                        echo"<div class='nome_produto'> <h2>".$product['name']."</h2> </div>";
+                        echo"<div class='preco_produto'> <h2>R$ ".$product['value']."</h2> </div>";
+                        echo"</a>";
+                        echo"<div class='add_carrinho'>
+                                 <button>
+                                     <h2>Adicionar</h2>
+                                     <div class='imagem_cart'>
+                                         <img src='images/img_carrinho.png' alt='' height='30px'>
+                                     </div>
+                                 </button>
+                             </div>";
+                         echo"</div>";   
+                    }
+                 }
+            }
            ?>
         </div><!--produtos-->
 
         <div class="card_curiosities">
-            <h2 class="title">Curiosidades das bebidas </h2>            
+            <h2 class="title">Curiosidades</h2>            
             <div class="flex">
                 <div class="flip-box">
                     <div class="flip-box-inner">
                         <div class="flip-box-front">
                             <h2></h2>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyRRRh_XCEAUwa0vSuPyzXnlgvT2jV1pnNcw&usqp=CAU" alt="" height="173px" width="100%">
-                            <p>(Passe o mouse ou clique)</p>
+                            <img src="https://i.ytimg.com/vi/J2lWG24rFUE/mqdefault.jpg" alt="" height="173px" width="100%">
                         </div>
                         <div class="flip-box-back">
                             <h2>Whiskey</h2>
@@ -183,7 +210,6 @@
                         <div class="flip-box-front">
                             <h2></h2>
                             <img src="https://www.casamelhor.com/wp-content/uploads/2021/07/banner-para-vodka-1-750x450.jpg" alt="" height="172px" width="100%">
-                            <p>(Passe o mouse ou clique)</p>
                         </div>
                         <div class="flip-box-back">
                             <h2>Vodka</h2>
@@ -196,7 +222,7 @@
                         <div class="flip-box-front">
                             <h2></h2>
                             <img src="https://www.revistabula.com/wp/wp-content/uploads/2021/04/vinho-610x350.jpg" alt="" height="173px" width="100%">
-                            <p>(Passe o mouse ou clique)</p>
+                            
                         </div>
                         <div class="flip-box-back">
                             <h2>Vinho</h2>
