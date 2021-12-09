@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="cart">
-                <a href="/Carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i></a>
+                <a href="Carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
 

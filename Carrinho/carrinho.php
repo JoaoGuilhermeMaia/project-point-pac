@@ -1,7 +1,7 @@
 <?php 
 
     include_once ('../db/connection.php');
-
+    include_once ("../user/security/validate.php");
 
 ?>
 
@@ -68,30 +68,14 @@
     </div>
 
     <?php
+        $sql = "SELECT * FROM products AS p 
+        JOIN users_has_products AS c
+        ON p.category_id = c.products_category_id
+        WHERE users_iduser = '".$_SESSION['iduser']."'";
 
-    if(!isset($_SESSION['itens'])){
-        $_SESSION['itens'] = array();
-    }
-
-    if(isset($_GET['add']) && $_GET['add'] == "carrinho"){
-        /*Adiciona ao carrinho*/
-        $id = $_GET['category_id'];
-        if (!isset($_SESSION['itens'][$id])){
-            $_SESSION['itens'][$id] = 1;            
-        }else{
-            $_SESSION['itens'] [$id] += 1;
-        }
-    }
-    if (count($_SESSION['itens']) == 0){
-        echo'Carrinho Vazio <br><a href"../index.php">Adicionar itens</a>';
-    }else{
-        foreach($_SESSION['itens'] as $id => $quantidade)
+        $result = $db_connection->query($sql);
+        foreach($result as $item)
         {
-            $sql = "SELECT * FROM products";
-            $stm_sql = $db_connection->prepare($sql);
-            $stm_sql->execute();
-            $products = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
-            
             echo'<div class="tableProducts">';
                 echo'<table>';
                     echo'<thead>
@@ -102,10 +86,10 @@
                         </thead>';
                     echo'<tbody>';
                         echo'<tr>';
-                            echo'<td><img src="'.$products[0]['image'].'" alt="Seu produto"></td>';
-                            echo'<td>'.$products[0]['name'].'</td>';
-                            echo'<td>R$ </td>';
-                            echo'<td><i class="fas fa-trash"></i></td>';
+                            echo'<td><img src="../Cadastro de Produtos/imagem/image'.$item['image'].'" alt="Seu produto"></td>';
+                            echo'<td>'.$item['name'].'</td>';
+                            echo'<td>R$ '. $item['value'].'</td>';
+                            echo'<td><a href="deleteCarrinho.php?idProduct='.$item['category_id'].'"> <i class="fas fa-trash"></i></td>';
                         echo'</tr>';
                     echo'</tbody>';
                 echo'</table>';
@@ -114,7 +98,6 @@
                 </div>';
         echo'</div>';
         }
-    }
     
     ?>
     

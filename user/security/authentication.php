@@ -19,7 +19,7 @@
             session_start();
             $_SESSION['admin'] = $result[0]['admin'];  
             $_SESSION['name'] = $result[0]['name'];
-            $_SESSION['id'] = $result[0]['iduser'];
+            $_SESSION['iduser'] = $result[0]['iduser'];
             $_SESSION['sessionId'] = session_id();
 
             header('Location: ../../index.php');
