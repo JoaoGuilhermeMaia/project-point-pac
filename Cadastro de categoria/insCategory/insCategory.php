@@ -4,7 +4,7 @@
     $name = $_POST['nameCategory'];
     
     $image  = $_FILES['imageCategory'];
-    $route = "../imagem/image";
+    $route = "../image/image";
     move_uploaded_file($image['tmp_name'], $route . $image['name']);
 
     $sql = "INSERT INTO categories (name, image) VALUES (:name, :image)";

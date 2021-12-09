@@ -325,21 +325,18 @@ to {opacity: 1}
 }
 /*Botão de adicionar ao carrinho*/
 
-
 .card_curiosities{
-    background-color: rgb(102, 102, 102);
     border-top: 1px solid rgb(255, 94, 0);
-    border-bottom: 1px solid rgb(255, 94, 0);
     width: 100%;
     padding: 20px;
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
+
 .card_curiosities .title {
     text-align: center;
     color: rgb(0, 0, 0);
     letter-spacing: 4px;
-    font-family: Merriweather, serif;
 }
 
 .flip-box {
@@ -372,8 +369,11 @@ to {opacity: 1}
 }
   /* Style the front side */
 .flip-box-front {
-    background-color: rgb(102, 102, 102);
     color: black;
+    border-radius: 10px;
+}
+.flip-box-front img{
+    border-radius: 10px;
 }
 
 .flip-box-front p{
@@ -381,9 +381,10 @@ to {opacity: 1}
 }
   /* Style the back side */
 .flip-box-back {
-    background-color: rgb(226, 118, 18);
+    background-color: rgb(170, 170, 170);
+    border-radius: 10px;
     border: 1px solid black;
-    color: rgb(235, 235, 235);
+    color: rgb(0, 0, 0);
     transform: rotateY(180deg);
 }
 .flip-box-back p{
