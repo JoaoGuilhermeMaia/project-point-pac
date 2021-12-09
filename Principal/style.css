@@ -460,20 +460,17 @@ footer h2{
 footer .social{
     width: 25%;
     text-align: center;
-
 }
 footer .team{
     width: 25%;
-
 }
 footer .location{
     width: 50%;
     text-align: center;
-
 }
 footer .location p{
     margin-top: 10px;
-    text-align:left;
+    text-align:center;
 }
 
 
