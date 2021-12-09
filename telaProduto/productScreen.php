@@ -28,39 +28,18 @@
             <div class="popup" onclick="myFunction()">
                 <p class="myAccount">Acessar <br> <strong>Minha conta</strong></p>
                 <div class="popuptext" id="myPopup">
-                    <a href="../user/login/login.php"><p class="toEnter">Entrar</p></a>
-                    <a href=""><p class="exit">Sair</p></a>
+                    <?php
+                        if(!isset($_SESSION['sessionId'])){
+                            echo "<a href='user/login/login.php'><p class='toEnter'>Entrar</p></a>";
+                        }
+                    ?>
+                    <a href="user/logoff/logout.php"><p class="exit">Sair</p></a>
                 </div>
             </div>
             <div class="cart">
                 <a href="../Carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
-
-         <!--Responsive Navbar-->
-        <div class="wrapper" id="wrapper">
-            <input type="checkbox" id="btn" hidden>
-            <label for="btn" class="menu-btn">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times"></i>
-            </label>
-            <nav id="sidebar">
-                <div class="title">
-                  Barra de navegação
-                </div>
-                <ul class="list-items">
-                    <li><a href="../user//login//login.php"><i class="fas fa-user"></i>Login / Cadastro</a></li>
-                    <li><a href="/Carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i>Carrinho</a></li>
-                    <li><a href="/Carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i>Sair</a></li>
-                    <div class="icons">
-                        <a href="https://www.linkedin.com/in/matheus-rosa-bruns-111536208/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.linkedin.com/in/carlos-eduardo-nass-66bba91b4/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.linkedin.com/in/jo%C3%A3o-guilherme-maia-/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.linkedin.com/in/matheus-bittencourt-306a86172/"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </ul>
-            </nav>
-        </div><!--Responsive Navbar-->
     </header>
     
     <div class="comeBack">
@@ -93,15 +72,14 @@
                     </div>';
             echo'</div>';
             echo'<div class="productDescription"> <p>'.$product["description"].'</p> </div>';
+            echo'<div class="addToCart2">
+            <a href="../Carrinho/insCarrinho.php?idProduct='.$product['category_id'] .'&idCategory='.$product["category_id_category"].'"><button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i></button></a>
+            </div>';
             }
         }
         ?>
     </div> 
-    <?php
-    echo'<div class="addToCart2">
-            <a href="../Carrinho/carrinho.php?add=carrinho&id='.($product['category_id'] && $product['category_id_category']).'"><button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i></button></a>
-        </div>';
-    ?>
+    
     <script>
         function myFunction() {
           var popup = document.getElementById("myPopup");

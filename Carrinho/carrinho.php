@@ -130,9 +130,9 @@
                 <a href="deleteAll.php"><button>Finalizar compra</button></a>
             </div>';
         }else{
-            echo '<div> 
-            <img src="../images/jhon travolta.gif"> <br><small> meio vazio por aqui...</small>
-                </div>';
+            echo '<div class="gif"> 
+                <img src="../images/jhon travolta.gif"> <br><small> meio vazio por aqui...</small>
+            </div>';
         }
         ?>
     </div>

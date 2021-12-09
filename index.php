@@ -80,7 +80,11 @@
                         }
                     ?>
                     <li><a href="Carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i>Carrinho</a></li>
-                    <li><a href="user/logoff/logout.php"><i class="fas fa-sign-out-alt"></i>Sair</a></li>
+                    <?php
+                        if(isset($_SESSION['sessionId'])){
+                            echo'<li><a href="user/logoff/logout.php"><i class="fas fa-sign-out-alt"></i>Sair</a></li>';
+                        }
+                    ?>
                     <div class="icons">
                         <a href="https://www.linkedin.com/in/matheus-rosa-bruns-111536208/"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.linkedin.com/in/carlos-eduardo-nass-66bba91b4/"><i class="fab fa-linkedin"></i></a>

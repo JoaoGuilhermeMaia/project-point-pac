@@ -403,6 +403,9 @@ tbody tr{
     .checkout button{
         padding: 10px 1px;
     }
+    .gif img{
+        width: 200px;
+    }
     
 }
 

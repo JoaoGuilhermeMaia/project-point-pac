@@ -329,10 +329,11 @@ header .main_header .cart a i{
     display: none;
 }
 .addToCart2 button{
+    left: 0;
     width: 100%;
     margin: auto;
     padding: 15px;
-    z-index: 100;
+    z-index: 1;
     position:fixed;
     bottom: 0;
     color: white;
