@@ -1,6 +1,6 @@
 <?php
-
     include_once("../db/connection.php");
+    include_once("../user/security/validate.php");
 
     $id = $_GET['id'];
 
@@ -90,7 +90,7 @@
                     </div>';
                 echo'<div class="productPrice"> <h2>R$ '.$product["value"].'</h2> </div>';
                 echo'<div class="addToCart">
-                    <a href="../Carrinho/carrinho.php?add=carrinho&id='.$product['category_id'].'"><button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i> </button></a>
+                    <a href="../Carrinho/carrinho.php?add=carrinho&id='.($product['category_id'] && $_SESSION['iduser'] && $product['category_id_category']).'"><button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i> </button></a>
                     </div>';
             echo'</div>';
             echo'<div class="productDescription"> <p>'.$product["description"].'</p> </div>';
@@ -100,7 +100,7 @@
     </div> 
     <?php
     echo'<div class="addToCart2">
-            <a href="../Carrinho/carrinho.php?add=carrinho&id='.$product['category_id'] && $_SESSION['iduser'] && $product['category_id_category'] .'"><button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i> </button></a>
+            <a href="../Carrinho/carrinho.php?add=carrinho&id='.($product['category_id'] && $_SESSION['iduser'] && $product['category_id_category']).'"><button name="addToCart">Adicionar ao <i class="fas fa-shopping-cart"></i></button></a>
         </div>';
     ?>
     <script>

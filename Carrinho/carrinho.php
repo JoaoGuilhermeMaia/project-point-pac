@@ -75,51 +75,47 @@
 
     if(isset($_GET['add']) && $_GET['add'] == "carrinho"){
         /*Adiciona ao carrinho*/
-        $idProduto = $_GET['category_id'];
-        if (!isset($_SESSION['itens'][$idProduto])){
-            $_SESSION['itens'][$idProduto] = 1;            
+        $id = $_GET['category_id'];
+        if (!isset($_SESSION['itens'][$id])){
+            $_SESSION['itens'][$id] = 1;            
         }else{
-            $_SESSION['itens'] [$idProduto] += 1;
+            $_SESSION['itens'] [$id] += 1;
         }
     }
     if (count($_SESSION['itens']) == 0){
         echo'Carrinho Vazio <br><a href"../index.php">Adicionar itens</a>';
     }else{
-        
-        $sql = "SELECT * FROM products";
-        $stm_sql = $db_connection->prepare($sql);
-        $stm_sql->execute();
-        $products = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
-
-
+        foreach($_SESSION['itens'] as $id => $quantidade)
+        {
+            $sql = "SELECT * FROM products";
+            $stm_sql = $db_connection->prepare($sql);
+            $stm_sql->execute();
+            $products = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
+            
+            echo'<div class="tableProducts">';
+                echo'<table>';
+                    echo'<thead>
+                            <td></td>
+                            <td>Produto</td>
+                            <td>Preço</td>
+                            <td>Remover</td>
+                        </thead>';
+                    echo'<tbody>';
+                        echo'<tr>';
+                            echo'<td><img src="'.$products[0]['image'].'" alt="Seu produto"></td>';
+                            echo'<td>'.$products[0]['name'].'</td>';
+                            echo'<td>R$ </td>';
+                            echo'<td><i class="fas fa-trash"></i></td>';
+                        echo'</tr>';
+                    echo'</tbody>';
+                echo'</table>';
+                echo'<div class="subtotal">
+                    <p>Subtotal: <strong>R$ 101,00</strong></p>
+                </div>';
+        echo'</div>';
+        }
     }
     
-
-    echo'<div class="tableProducts">';
-        echo'<table>';
-            echo'<thead>
-                    <td></td>
-                    <td>Produto</td>
-                    <td>Preço</td>
-                    <td>Remover</td>
-                </thead>';
-            echo'<tbody>';
-                echo'<tr>';
-                    echo'<td><img src="" alt="Seu produto"></td>';
-                    echo'<td>nome do produto </td>';
-                    echo'<td>R$ Preço</td>';
-                    echo'<td><i class="fas fa-trash"></i></td>';
-                echo'</tr>';
-            echo'</tbody>';
-        echo'</table>';
-        echo'<div class="subtotal">
-            <p>Subtotal: <strong>R$ 101,00</strong></p>
-        </div>';
-    echo'</div>';
-
-
-
-
     ?>
     
 
