@@ -25,18 +25,6 @@
             </a>
 
         </div>
-        <div class="main_header">
-            <div class="popup" onclick="myFunction()">
-                <p class="myAccount">Acessar <br> <strong>Minha conta</strong></p>
-                <div class="popuptext" id="myPopup">
-                    <a href="/login/login.html"><p class="toEnter">Entrar</p></a>
-                    <a href=""><p class="exit">Sair</p></a>
-                </div>
-            </div>
-            <div class="cart">
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
 
          <!--Responsive Navbar-->
         <div class="wrapper" id="wrapper">
@@ -72,8 +60,10 @@
         JOIN users_has_products AS c
         ON p.category_id = c.products_category_id
         WHERE users_iduser = '".$_SESSION['iduser']."'";
+        $stm_sql = $db_connection->prepare($sql);
+        $stm_sql->execute();
 
-        $result = $db_connection->query($sql);
+        $result = $stm_sql->fetchAll(PDO::FETCH_ASSOC);
         foreach($result as $item)
         {
             echo'<div class="tableProducts">';
@@ -96,7 +86,7 @@
                 echo'<div class="subtotal">
                     <p>Subtotal: <strong>R$ 101,00</strong></p>
                 </div>';
-        echo'</div>';
+            echo'</div>';
         }
     
     ?>
@@ -106,9 +96,17 @@
         <div class="keep_buying">
             <a href="../index.php"><button >Continuar Comprando</button></a>
         </div>
-        <div class="checkout_buy">
-            <button>Finalizar compra</button>
-        </div>
+        <?php
+        if(count($result) > 0){
+            echo '<div class="checkout_buy">
+                <a href="deleteAll.php"><button>Finalizar compra</button></a>
+            </div>';
+        }else{
+            echo '<div> 
+            <img src="../images/jhon travolta.gif"> <br><small> meio vazio por aqui...</small>
+                </div>';
+        }
+        ?>
     </div>
 
 

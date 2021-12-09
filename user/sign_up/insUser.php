@@ -9,24 +9,29 @@
 
     if(isset($name) && isset($email) && isset($passwordMD5)){
 
-        $sql = "SELECT category_id FROM users WHERE category_name = 'admin'";
+        $sql = "SELECT iduser FROM users WHERE email = :email";
 
         $stm_sql = $db_connection->prepare($sql); 
-        $stm_sql->bindParam(':name', $name);
-
-        $sql = "INSERT INTO users (name, email, password, admin) VALUES (:name, :email, :password, :admin)";
-
-        $stm_sql = $db_connection->prepare($sql); 
-        $stm_sql->bindParam(':name', $name);
         $stm_sql->bindParam(':email', $email);
-        $stm_sql->bindParam(':password', $passwordMD5);
-        $stm_sql->bindParam(':admin', $admin);
-        $result = $stm_sql->execute();
+        $isValid = $stm_sql->execute();
+        
+        if($isValid == false){
+            $sql = "INSERT INTO users (name, email, password, admin) VALUES (:name, :email, :password, :admin)";
 
-        if($result){
-            header('Location: ../../index.php');
+            $stm_sql = $db_connection->prepare($sql); 
+            $stm_sql->bindParam(':name', $name);
+            $stm_sql->bindParam(':email', $email);
+            $stm_sql->bindParam(':password', $passwordMD5);
+            $stm_sql->bindParam(':admin', $admin);
+            $result = $stm_sql->execute();
+
+            if($result){
+                header('Location: ../../index.php');
+            }else{
+                echo "Error";
+            }
         }else{
-            echo "Error";
+            header('Location: cadastro.php?error=1');
         }
     }
 ?>

@@ -2,7 +2,6 @@
 
     include_once "../db/connection.php";
     include_once("../user/security/validate.php");
-    session_status();
 
     $id_product = $_GET['idProduct'];
     $id_category = $_GET['idCategory'];
@@ -24,6 +23,7 @@
         $stm_sql->bindParam(':idCategory', $id_category);
 
         $result = $stm_sql->execute();
+        header ("Location: carrinho.php");
     }else{
         header ("Location: ../telaProduto/productScreen.php?id=" . $id_product);
     }

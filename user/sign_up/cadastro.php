@@ -20,6 +20,11 @@
         <br><br>
         <h2>Cadastro</h2>
         <br>
+        <?php
+            if(isset($_GET['error'])){
+                echo '<p class="error">Email já cadastrado!</p>';
+            }
+        ?>
         <form action="insUser.php" method="post">
             <label for="name"><p>Nome</p></label>
             <input required id="name" class="name" type="text" placeholder="Digite seu nome" data-val="True" name="name">
