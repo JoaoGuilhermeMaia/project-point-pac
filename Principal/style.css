@@ -309,13 +309,12 @@ to {opacity: 1}
     position: relative;
     top: 5px;
 }
-.add_carrinho a .imagem_cart{
+.add_carrinho a button .imagem_cart{
     margin-top: 10px;
     margin-left: 15px;
     
 }
-.add_carrinho button{
-    width: 100%;
+.add_carrinho a button{
     display: flex;
     justify-content: center;
     text-align: center;

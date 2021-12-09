@@ -166,12 +166,12 @@
         height: 200px;
         width: 100%;
     }
-    .add_carrinho h2{
-        font-size: 19px;
+    .add_carrinho a h2{
+        font-size: 15px;
         top: 10px;
     }
-    .add_carrinho .imagem_cart img{
-        height: 25px;
+    .add_carrinho a .imagem_cart img{
+        height: 24px;
     }
 }
 @media screen and (max-width: 570px){
