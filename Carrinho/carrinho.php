@@ -25,6 +25,19 @@
             </a>
 
         </div>
+        <div class="main_header">
+            <div class="popup" onclick="myFunction()">
+                <p class="myAccount"><strong>Minha conta</strong></p>
+                <div class="popuptext" id="myPopup">
+                    <?php
+                        if(!isset($_SESSION['sessionId'])){
+                            echo "<a href='user/login/login.php'><p class='toEnter'>Entrar</p></a>";
+                        }
+                    ?>
+                    <a href="user/logoff/logout.php"><p class="exit">Sair</p></a>
+                </div>
+            </div>
+        </div>
 
          <!--Responsive Navbar-->
         <div class="wrapper" id="wrapper">
@@ -38,8 +51,26 @@
                   Barra de navegação
                 </div>
                 <ul class="list-items">
-                    <li><a href="../user/login/login.php"><i class="fas fa-user"></i>Login / Cadastro</a></li>
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i>Carrinho</a></li>
+                <?php
+                        if(isset($_SESSION['sessionId'])){
+                            echo'<li><a href="#">Olá, '.$_SESSION['name']. '</a></li>';
+                        }
+                    ?>
+                    <?php
+                        if(isset($_SESSION['admin' == 1])) {
+                            echo'<li><a href="/tabelaProduto/admin.html"><i class="fas fa-user"></i>Administrador</a></li>';
+                        }
+                    ?>
+                    <?php
+                        if(!isset($_SESSION['sessionId'])){
+                            echo "<li><a href='user/login/login.php'><i class='fas fa-user'></i>Entrar</a></li>";
+                        }
+                    ?>
+                    <?php
+                        if(isset($_SESSION['sessionId'])){
+                            echo "<li><a href='user/logoff/logout.php'><p class='exit'>Sair</p></a></li>";
+                        }
+                    ?>
                     <div class="icons">
                         <a href="https://www.linkedin.com/in/matheus-rosa-bruns-111536208/"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.linkedin.com/in/carlos-eduardo-nass-66bba91b4/"><i class="fab fa-linkedin"></i></a>
@@ -83,9 +114,6 @@
                         echo'</tr>';
                     echo'</tbody>';
                 echo'</table>';
-                echo'<div class="subtotal">
-                    <p>Subtotal: <strong>R$ 101,00</strong></p>
-                </div>';
             echo'</div>';
         }
     
