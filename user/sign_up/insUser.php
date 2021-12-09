@@ -7,7 +7,7 @@
     $passwordMD5 = md5($password);
     $admin = 0;
 
-    if(isset($name) && isset($email) && isset($passwordMD5) && ){
+    if(isset($name) && isset($email) && isset($passwordMD5)){
 
         $sql = "SELECT category_id FROM users WHERE category_name = 'admin'";
 

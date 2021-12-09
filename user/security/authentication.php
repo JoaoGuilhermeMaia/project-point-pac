@@ -16,18 +16,17 @@
         $result = $stm_sql-> fetchAll(PDO::FETCH_ASSOC);
 
         if(count($result) > 0){
-
             session_start();
-            $_SESSION = $result[0];
+            $_SESSION['admin'] = $result[0]['admin'];  
+            $_SESSION['name'] = $result[0]['name'];
+            $_SESSION['id'] = $result[0]['iduser'];
             $_SESSION['sessionId'] = session_id();
-            if($_SESSION['admin'] == 0){
-                header('Location: ../index.php');
-            }else{
-                header('Location: ../../tablesAdmin/tableProducts.php');    
-            }
+
+            header('Location: ../../index.php');
         }else{
             header('Location: ../login/login.php?error=1');
         }
+       
     }else{
         header('Location: ../login/login.php?error=2');
     }

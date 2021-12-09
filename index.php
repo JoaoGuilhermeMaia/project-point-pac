@@ -1,6 +1,10 @@
 <?php 
     include "db/connection.php";
     session_start();
+
+    if(session_status() == 2 && isset($_SESSION['admin']) && $_SESSION['admin'] == 1){
+        header('Location: tablesAdmin/tableProducts.php');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +29,8 @@
             <?php
                 if(isset($_SESSION['sessionId'])){
                     echo '<div class="header-message"> Olá, '.$_SESSION['name']. '!</div>';
+                    echo $_SESSION['admin'];
+                   
                 }
             ?>
 
